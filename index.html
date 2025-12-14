@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pt-BR" oncontextmenu="return false">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essência de Romã Hair | Diagnóstico Profissional</title>
+    
+    <!-- BLINDAGEM DE CÓDIGO -->
+    <script>
+        document.onkeydown = function(e) {
+            if(e.keyCode == 123) { return false; }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { return false; }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { return false; }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
+            if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) { return false; }
+        }
+        setInterval(function() {
+            var startTime = performance.now();
+            debugger; 
+            if (performance.now() - startTime > 100) {
+                document.body.innerHTML = '<div style="background:#1a0505;color:#ef4444;height:100vh;display:flex;align-items:center;justify-content:center;font-family:sans-serif;text-align:center;"><div><h1 style="font-size:2rem;">ACESSO RESTRITO</h1><p>Sistema protegido por Copyright © Essência de Romã</p></div></div>';
+            }
+        }, 1000);
+        document.addEventListener('dragstart', function(e){e.preventDefault();}, false);
+        document.addEventListener('selectstart', function(e){e.preventDefault();}, false);
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        roma: { 900: '#2b0505', 950: '#1a0505' },
+                        gold: { classic: '#d4af37', light: '#e8c872', dark: '#b38728' },
+                        neutral: { white: '#ffffff', off: '#f3f3f3', light: '#e5e5e5', mid: '#cccccc', dark: '#555555' },
+                        func: { green: '#4ade80', whatsapp: '#25D366', yellow: '#facc15', red: '#ef4444' }
+                    },
+                    fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['"Montserrat"', 'sans-serif'] },
+                    boxShadow: { 'float': '0 25px 50px -12px rgba(0, 0, 0, 0.5)', 'gold': '0 0 15px rgba(212, 175, 55, 0.2)' },
+                    backgroundImage: {
+                        'luxury-gradient': 'linear-gradient(135deg, #171717 0%, #262626 100%)',
+                        'roma-gradient': 'linear-gradient(135deg, #2b0505 0%, #1a0505 100%)',
+                        'gold-gradient': 'linear-gradient(90deg, #b45309 0%, #fbbf24 50%, #b45309 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { -ms-overflow-style: none; scrollbar-width: none; -webkit-user-select: none; user-select: none; background-color: #2b0505; color: #f3f3f3; }
+        body::-webkit-scrollbar { display: none; }
+        
+        .view-section { display: none; min-height: 100vh; width: 100%; animation: fadeIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); will-change: transform, opacity; }
+        .view-section.active { display: flex; flex-direction: column; }
+        
+        .gold-text { background: linear-gradient(to right, #e8c872, #bf953f, #b38728, #fbf5b7, #aa771c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; background-size: 200% auto; animation: shine 4s linear infinite; }
+        .btn-metallic { background-image: linear-gradient(to right, #d4af37, #fcf6ba, #b38728); background-size: 200% auto; color: #1a0505; transition: 0.5s; border: 1px solid #aa771c; }
+        .btn-metallic:hover { background-position: right center; box-shadow: 0 0 20px #d4af37; transform: scale(1.02); }
+
+        .option-card { transition: all 0.2s ease-out; background-color: #ffffff; border: 1px solid #e5e5e5; will-change: transform, box-shadow; }
+        .option-card:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15); border-color: #d4af37; }
+        .option-card.selected { border-color: #d4af37; background-color: #fffbf0; box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2); }
+        .option-card.selected i { color: #b38728; }
+        .option-card.selected .checkbox-indicator { background-color: #d4af37; border-color: #d4af37; }
+        
+        .prescription-paper { background-color: #ffffff; background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E"); box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.5); }
+        
+        .bio-segment { flex-grow: 1; background-color: #e5e5e5; transition: background-color 0.5s ease; opacity: 0.3; }
+        .bio-segment.active { opacity: 1; }
+        .bio-segment:nth-child(-n+16).active { background-color: #4ade80; box-shadow: 0 0 5px #4ade80; }
+        .bio-segment:nth-child(n+17):nth-child(-n+33).active { background-color: #facc15; box-shadow: 0 0 5px #facc15; }
+        .bio-segment:nth-child(n+34).active { background-color: #ef4444; box-shadow: 0 0 5px #ef4444; }
+
+        .card-checkbox { appearance: none; width: 22px; height: 22px; border: 2px solid rgba(255,255,255,0.6); border-radius: 4px; background: transparent; cursor: pointer; position: relative; transition: all 0.3s; }
+        .card-checkbox:checked { background-color: #d4af37; border-color: #fcf6ba; box-shadow: 0 0 10px #d4af37; }
+        .card-checkbox:checked::after { content: '✓'; color: #1a0505; font-size: 16px; font-weight: 800; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes shine { to { background-position: 200% center; } }
+    </style>
+</head>
+<body class="bg-roma-900 font-sans text-neutral-dark antialiased">
+
+    <header class="fixed top-0 w-full z-50 bg-roma-900/90 backdrop-blur-md border-b border-roma-950 h-16 flex items-center justify-center shadow-lg transition-all duration-300">
+        <span class="text-lg md:text-xl font-serif font-bold text-white tracking-widest uppercase flex items-center gap-2">
+            <i class="fas fa-gem text-gold-classic text-xs"></i> <span class="gold-text">Essência de Romã</span>
+        </span>
+    </header>
+
+    <main class="pt-16 min-h-screen">
+
+        <!-- VIEW 1: HOME -->
+        <section id="view-home" class="view-section active items-center justify-center relative bg-roma-900">
+            <div class="absolute inset-0 z-0 opacity-[0.05] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
+            
+            <div class="max-w-4xl mx-auto px-6 text-center z-10 py-10 relative">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 border border-gold-classic/30 rounded-full bg-roma-950/50 backdrop-blur-sm shadow-gold animate-fade-in-up">
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold-classic animate-pulse"></span>
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-gold-light uppercase">Inteligência Tricológica</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-8 leading-[1.1] tracking-tight">
+                    A Ciência <br><span class="gold-text italic">Exata do Fio.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-neutral-off mb-8 max-w-xl mx-auto font-light leading-relaxed">
+                    Sua rotina atual pode estar agredindo seu cabelo silenciosamente. Descubra em <strong>5 etapas</strong> o Protocolo Híbrido (Salão + Casa).
+                </p>
+                
+                <div class="flex items-center justify-center gap-2 mb-10 text-neutral-mid text-xs">
+                    <div class="flex -space-x-2">
+                        <div class="w-6 h-6 rounded-full bg-gray-200 border border-roma-900"></div>
+                        <div class="w-6 h-6 rounded-full bg-gray-300 border border-roma-900"></div>
+                        <div class="w-6 h-6 rounded-full bg-gray-400 border border-roma-900"></div>
+                    </div>
+                    <p>+128 diagnósticos realizados hoje</p>
+                </div>
+
+                <div class="flex flex-col items-center gap-5 w-full max-w-sm mx-auto">
+                    <button onclick="changeView('view-tool')" class="group relative btn-metallic px-8 py-5 w-full font-bold text-xs tracking-[0.25em] uppercase rounded-sm border border-transparent animate-pulse-slow">
+                        <span class="relative z-10 flex items-center justify-center">
+                            Iniciar Diagnóstico <i class="fas fa-chevron-right ml-3 text-[10px]"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 2: FERRAMENTA -->
+        <section id="view-tool" class="view-section bg-roma-900">
+            <div class="max-w-xl mx-auto w-full px-6 py-10 flex-grow flex flex-col justify-center relative">
+                <div class="fixed top-16 left-0 w-full h-1 bg-roma-950 z-40">
+                    <div id="progressBar" class="h-full bg-gold-classic w-[5%] transition-all duration-700 ease-out box-shadow-gold"></div>
+                </div>
+
+                <div class="bg-neutral-white rounded-sm shadow-xl border border-neutral-light p-6 md:p-10 relative">
+                    
+                    <!-- ETAPA 1: HISTÓRICO -->
+                    <div id="step1" class="step-container transition-all duration-500">
+                        <div class="mb-8 border-b border-neutral-light pb-4">
+                            <span class="text-[10px] font-bold text-roma-900 uppercase tracking-widest block mb-1">Etapa 1 de 4</span>
+                            <h2 class="text-3xl font-serif font-bold text-neutral-800">Histórico Químico</h2>
+                            <p class="text-neutral-dark text-sm mt-2 font-medium">Selecione os procedimentos dos últimos 6 meses.</p>
+                        </div>
+                        <div class="grid grid-cols-1 gap-3 mb-8">
+                            <button onclick="toggleHistory(this, 'natural')" class="option-card flex items-center p-5 rounded-sm bg-white group select-none">
+                                <div class="w-10 h-10 bg-neutral-50 text-gray-400 rounded-full flex items-center justify-center mr-4 shadow-sm border border-neutral-light"><i class="fas fa-leaf"></i></div>
+                                <div class="text-left flex-grow"><h3 class="font-bold text-neutral-800 text-sm">Nenhum / Virgem Absoluto</h3><p class="text-xs text-neutral-dark mt-0.5">Sem nenhuma química.</p></div>
+                                <div class="checkbox-indicator w-5 h-5 rounded border border-neutral-mid flex items-center justify-center text-white"><i class="fas fa-check text-[10px]"></i></div>
+                            </button>
+                            <button onclick="toggleHistory(this, 'coloracao')" class="option-card flex items-center p-5 rounded-sm bg-white group select-none"><div class="w-10 h-10 bg-neutral-50 text-gray-400 rounded-full flex items-center justify-center mr-4 shadow-sm border border-neutral-light"><i class="fas fa-palette"></i></div><div class="text-left flex-grow"><h3 class="font-bold text-neutral-800 text-sm">Coloração / Tonalizante</h3></div><div class="checkbox-indicator w-5 h-5 rounded border border-neutral-mid flex items-center justify-center text-white"><i class="fas fa-check text-[10px]"></i></div></button>
+                            <button onclick="toggleHistory(this, 'descolorido')" class="option-card flex items-center p-5 rounded-sm bg-white group select-none"><div class="w-10 h-10 bg-neutral-50 text-gray-400 rounded-full flex items-center justify-center mr-4 shadow-sm border border-neutral-light"><i class="fas fa-sun"></i></div><div class="text-left flex-grow"><h3 class="font-bold text-neutral-800 text-sm">Mechas / Descoloração</h3></div><div class="checkbox-indicator w-5 h-5 rounded border border-neutral-mid flex items-center justify-center text-white"><i class="fas fa-check text-[10px]"></i></div></button>
+                            <button onclick="toggleHistory(this, 'alisado')" class="option-card flex items-center p-5 rounded-sm bg-white group select-none"><div class="w-10 h-10 bg-neutral-50 text-gray-400 rounded-full flex items-center justify-center mr-4 shadow-sm border border-neutral-light"><i class="fas fa-wind"></i></div><div class="text-left flex-grow"><h3 class="font-bold text-neutral-800 text-sm">Progressiva / Alisamento</h3></div><div class="checkbox-indicator w-5 h-5 rounded border border-neutral-mid flex items-center justify-center text-white"><i class="fas fa-check text-[10px]"></i></div></button>
+                        </div>
+                        <button onclick="finishStep1()" class="w-full btn-metallic py-4 font-bold tracking-[0.2em] shadow-lg transition uppercase text-xs rounded-sm">Confirmar Histórico</button>
+                    </div>
+
+                    <!-- ETAPA 2: OBJETIVO -->
+                    <div id="step2" class="step-container hidden transition-all duration-500">
+                        <div class="mb-8 border-b border-neutral-light pb-4">
+                            <span class="text-[10px] font-bold text-roma-900 uppercase tracking-widest block mb-1">Etapa 2 de 4</span>
+                            <h2 class="text-3xl font-serif font-bold text-neutral-800">O Objetivo</h2>
+                            <p class="text-neutral-dark text-sm mt-2 font-medium">Qual é sua prioridade?</p>
+                        </div>
+                        <div class="grid grid-cols-1 gap-3">
+                            <button onclick="selectObjective('descobrir')" class="option-card flex items-center p-5 border border-gold-light bg-gold-shine/10 rounded-sm group"><div class="w-12 h-12 bg-white text-gold-dark rounded-full flex items-center justify-center text-xl mr-4 shrink-0 shadow-sm border border-gold-light"><i class="fas fa-search-plus"></i></div><div class="text-left"><h3 class="font-bold text-neutral-800 text-sm">Não sei / Quero Descobrir</h3><p class="text-xs text-neutral-dark mt-0.5 font-medium">Check-up completo.</p></div></button>
+                            <button onclick="selectObjective('recuperar')" class="option-card flex items-center p-5 rounded-sm bg-white group"><div class="w-12 h-12 bg-neutral-50 text-gray-400 rounded-full flex items-center justify-center group-hover:bg-func-red group-hover:text-white transition-colors mr-4 shrink-0 shadow-sm border border-neutral-light"><i class="fas fa-heart-broken"></i></div><div class="text-left"><h3 class="font-bold text-neutral-800 text-sm">Sinto que está danificado</h3><p class="text-xs text-neutral-dark mt-0.5">Fraco, elástico ou quebrando.</p></div></button>
+                            <button onclick="selectObjective('crescimento')" class="option-card flex items-center p-5 rounded-sm bg-white group"><div class="w-12 h-12 bg-neutral-50 text-gray-400 rounded-full flex items-center justify-center group-hover:bg-func-green group-hover:text-white transition-colors mr-4 shrink-0 shadow-sm border border-neutral-light"><i class="fas fa-arrow-up"></i></div><div class="text-left"><h3 class="font-bold text-neutral-800 text-sm">Crescimento / Força</h3><p class="text-xs text-neutral-dark mt-0.5">Quero ele longo e resistente.</p></div></button>
+                            <button onclick="selectObjective('brilho')" class="option-card flex items-center p-5 rounded-sm bg-white group"><div class="w-12 h-12 bg-neutral-50 text-gray-400 rounded-full flex items-center justify-center group-hover:bg-gold-classic group-hover:text-white transition-colors mr-4 shrink-0 shadow-sm border border-neutral-light"><i class="fas fa-star"></i></div><div class="text-left"><h3 class="font-bold text-neutral-800 text-sm">Brilho / Manutenção</h3><p class="text-xs text-neutral-dark mt-0.5">Melhorar o aspecto visual.</p></div></button>
+                        </div>
+                    </div>
+
+                    <!-- ETAPA 3: DORES -->
+                    <div id="step3" class="step-container hidden transition-all duration-500">
+                        <div class="mb-8 text-center border-b border-neutral-light pb-4">
+                            <span class="text-[10px] font-bold text-roma-900 uppercase tracking-widest block mb-1">Etapa 3 de 4</span>
+                            <h2 class="text-2xl font-serif font-bold text-neutral-800">Diagnóstico Tátil</h2>
+                            <p class="text-neutral-dark text-sm mt-2 font-medium">Toque no cabelo agora. O que você sente?</p>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
+                            <div onclick="toggleProblem(this, 'elastico')" class="problem-item cursor-pointer p-4 border border-neutral-light rounded-sm bg-neutral-50 text-center hover:shadow-md transition select-none group"><i class="fas fa-eraser text-2xl text-gray-300 group-hover:text-func-red mb-2 transition"></i><p class="font-bold text-xs text-neutral-800 uppercase">Elástico</p></div>
+                            <div onclick="toggleProblem(this, 'quebrando')" class="problem-item cursor-pointer p-4 border border-neutral-light rounded-sm bg-neutral-50 text-center hover:shadow-md transition select-none group"><i class="fas fa-cut text-2xl text-gray-300 group-hover:text-func-red mb-2 transition"></i><p class="font-bold text-xs text-neutral-800 uppercase">Quebrando</p></div>
+                            <div onclick="toggleProblem(this, 'pontas_espigadas')" class="problem-item cursor-pointer p-4 border border-neutral-light rounded-sm bg-neutral-50 text-center hover:shadow-md transition select-none group"><i class="fas fa-broom text-2xl text-gray-300 group-hover:text-gold-classic mb-2 transition"></i><p class="font-bold text-xs text-neutral-800 uppercase">Pontas Duplas</p></div>
+                            <div onclick="toggleProblem(this, 'frizz')" class="problem-item cursor-pointer p-4 border border-neutral-light rounded-sm bg-neutral-50 text-center hover:shadow-md transition select-none group"><i class="fas fa-bolt text-2xl text-gray-300 group-hover:text-gold-classic mb-2 transition"></i><p class="font-bold text-xs text-neutral-800 uppercase">Muito Frizz</p></div>
+                            <div onclick="toggleProblem(this, 'volume')" class="problem-item cursor-pointer p-4 border border-neutral-light rounded-sm bg-neutral-50 text-center hover:shadow-md transition select-none group"><i class="fas fa-cloud text-2xl text-gray-300 group-hover:text-purple-600 mb-2 transition"></i><p class="font-bold text-xs text-neutral-800 uppercase">Volume Alto</p></div>
+                            <div onclick="toggleProblem(this, 'ressecado')" class="problem-item cursor-pointer p-4 border border-neutral-light rounded-sm bg-neutral-50 text-center hover:shadow-md transition select-none group"><i class="fas fa-leaf text-2xl text-gray-300 group-hover:text-func-green mb-2 transition"></i><p class="font-bold text-xs text-neutral-800 uppercase">Ressecado</p></div>
+                            <div onclick="toggleProblem(this, 'opaco')" class="problem-item cursor-pointer p-4 border border-neutral-light rounded-sm bg-neutral-50 text-center hover:shadow-md transition select-none group col-span-2 md:col-span-1"><i class="fas fa-cloud text-2xl text-gray-300 group-hover:text-neutral-dark mb-2 transition"></i><p class="font-bold text-xs text-neutral-800 uppercase">Opaco / Sem Vida</p></div>
+                            <div onclick="toggleProblem(this, 'nenhum_sintoma')" class="problem-item cursor-pointer p-4 border border-neutral-light rounded-sm bg-neutral-50 text-center hover:shadow-md transition select-none group col-span-2 md:col-span-2"><i class="fas fa-smile text-2xl text-gray-300 group-hover:text-func-green mb-2 transition"></i><p class="font-bold text-xs text-neutral-800 uppercase">Nenhum Sintoma Visível</p></div>
+                        </div>
+                        <button onclick="goToHairType()" class="w-full btn-metallic py-4 font-bold tracking-[0.2em] shadow-lg transition uppercase text-xs rounded-sm">Próxima Etapa</button>
+                    </div>
+                    
+                    <!-- ETAPA 3.5: TIPO DE CABELO -->
+                    <div id="step3_5" class="step-container hidden transition-all duration-500">
+                        <div class="mb-8 border-b border-neutral-light pb-4">
+                            <span class="text-[10px] font-bold text-roma-900 uppercase tracking-widest block mb-1">Etapa 3.5 de 4</span>
+                            <h2 class="text-2xl font-serif font-bold text-neutral-800">Validação Biológica</h2>
+                            <p class="text-neutral-dark text-sm mt-2 font-medium">Como é o formato e espessura do seu fio natural?</p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <!-- Textura Visual -->
+                            <div>
+                                <h5 class="text-sm font-bold text-neutral-dark mb-3 uppercase tracking-wide">Formato:</h5>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <button onclick="selectTexture(this, 'liso')" class="texture-btn option-card p-4 rounded-sm text-center group"><i class="fas fa-minus text-gray-400 text-xl mb-2 group-hover:text-roma-900"></i><p class="text-xs font-bold text-neutral-800">Liso</p><p class="text-[9px] text-neutral-dark">Sem curvas</p></button>
+                                    <button onclick="selectTexture(this, 'ondulado')" class="texture-btn option-card p-4 rounded-sm text-center group"><i class="fas fa-wave-square text-gray-400 text-xl mb-2 group-hover:text-roma-900"></i><p class="text-xs font-bold text-neutral-800">Ondulado</p><p class="text-[9px] text-neutral-dark">Forma de "S"</p></button>
+                                    <button onclick="selectTexture(this, 'cacheado')" class="texture-btn option-card p-4 rounded-sm text-center group"><i class="fas fa-circle-notch text-gray-400 text-xl mb-2 group-hover:text-roma-900"></i><p class="text-xs font-bold text-neutral-800">Cacheado</p><p class="text-[9px] text-neutral-dark">Caracóis definidos</p></button>
+                                    <button onclick="selectTexture(this, 'crespo')" class="texture-btn option-card p-4 rounded-sm text-center group"><i class="fas fa-asterisk text-gray-400 text-xl mb-2 group-hover:text-roma-900"></i><p class="text-xs font-bold text-neutral-800">Crespo</p><p class="text-[9px] text-neutral-dark">Espirais fechadas</p></button>
+                                </div>
+                            </div>
+
+                            <!-- Densidade Visual -->
+                            <div>
+                                <h5 class="text-sm font-bold text-neutral-dark mb-3 uppercase tracking-wide">Espessura:</h5>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <button onclick="selectDensity(this, 'fino')" class="density-btn option-card p-4 rounded-sm text-center group"><div class="h-0.5 w-10 bg-gray-300 mx-auto mb-2 group-hover:bg-roma-900"></div><p class="text-xs font-bold text-neutral-800">Fino</p><p class="text-[9px] text-neutral-dark">Delicado</p></button>
+                                    <button onclick="selectDensity(this, 'grosso')" class="density-btn option-card p-4 rounded-sm text-center group"><div class="h-1.5 w-10 bg-gray-300 mx-auto mb-2 group-hover:bg-roma-900"></div><p class="text-xs font-bold text-neutral-800">Grosso / Médio</p><p class="text-[9px] text-neutral-dark">Encorpado</p></button>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="goToHabits()" class="w-full btn-metallic py-4 font-bold tracking-[0.2em] shadow-lg transition uppercase text-xs rounded-sm mt-8">Próxima Etapa</button>
+                    </div>
+
+                    <!-- ETAPA 4: HÁBITOS -->
+                    <div id="step4" class="step-container hidden transition-all duration-500">
+                        <div class="mb-8 border-b border-neutral-light pb-4">
+                            <span class="text-[10px] font-bold text-roma-900 uppercase tracking-widest block mb-1">Etapa Final</span>
+                            <h2 class="text-3xl font-serif font-bold text-neutral-800">Hábitos Térmicos</h2>
+                            <p class="text-neutral-dark text-sm mt-2 font-medium">Você usa secador ou chapinha?</p>
+                        </div>
+                        <div class="grid grid-cols-1 gap-3">
+                            <button onclick="selectHabit('diario')" class="option-card flex items-center p-5 rounded-sm bg-white group"><div class="w-10 h-10 bg-white text-gray-400 rounded-full flex items-center justify-center group-hover:bg-func-red group-hover:text-white transition-colors mr-4 shrink-0 shadow-sm border border-neutral-light"><i class="fas fa-fire"></i></div><div class="text-left"><h3 class="font-bold text-neutral-800 text-sm">Todo Dia / Frequentemente</h3><p class="text-xs text-neutral-dark mt-0.5">Dependente de calor.</p></div></button>
+                            <button onclick="selectHabit('semanal')" class="option-card flex items-center p-5 rounded-sm bg-white group"><div class="w-10 h-10 bg-white text-gray-400 rounded-full flex items-center justify-center group-hover:bg-func-yellow group-hover:text-white transition-colors mr-4 shrink-0 shadow-sm border border-neutral-light"><i class="fas fa-calendar-week"></i></div><div class="text-left"><h3 class="font-bold text-neutral-800 text-sm">2 a 3 vezes na semana</h3><p class="text-xs text-neutral-dark mt-0.5">Dias alternados.</p></div></button>
+                            <button onclick="selectHabit('eventual')" class="option-card flex items-center p-5 rounded-sm bg-white group"><div class="w-10 h-10 bg-white text-gray-400 rounded-full flex items-center justify-center group-hover:bg-gold-classic group-hover:text-white transition-colors mr-4 shrink-0 shadow-sm border border-neutral-light"><i class="fas fa-calendar-day"></i></div><div class="text-left"><h3 class="font-bold text-neutral-800 text-sm">Eventualmente</h3><p class="text-xs text-neutral-dark mt-0.5">Finais de semana.</p></div></button>
+                            <button onclick="selectHabit('nunca')" class="option-card flex items-center p-5 rounded-sm bg-white group"><div class="w-10 h-10 bg-white text-gray-400 rounded-full flex items-center justify-center group-hover:bg-func-green group-hover:text-white transition-colors mr-4 shrink-0 shadow-sm border border-neutral-light"><i class="fas fa-wind"></i></div><div class="text-left"><h3 class="font-bold text-neutral-800 text-sm">Natural</h3><p class="text-xs text-neutral-dark mt-0.5">Deixo secar ao ar livre.</p></div></button>
+                        </div>
+                    </div>
+
+                    <!-- ETAPA 5 & 6 (LOADING + GATE) -->
+                    <div id="step5" class="hidden flex flex-col items-center justify-center py-20 text-center">
+                        <div class="relative w-24 h-24 mb-8 mx-auto">
+                            <div class="absolute inset-0 border-t-2 border-r-2 border-roma-900 rounded-full animate-spin"></div>
+                            <div class="absolute inset-2 border-t-2 border-l-2 border-gray-200 rounded-full animate-spin reverse"></div>
+                            <div class="absolute inset-0 flex items-center justify-center"><i class="fas fa-dna text-roma-900 text-2xl opacity-80"></i></div>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-roma-900">Analisando Estrutura...</h3>
+                        <p id="loadingText" class="text-xs text-neutral-dark mt-2 uppercase tracking-[0.2em] font-bold">Processando dados...</p>
+                    </div>
+
+                    <div id="step6" class="hidden">
+                        <div class="text-center pt-10 pb-6">
+                            <div class="w-16 h-16 bg-roma-900 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl shadow-lg"><i class="fas fa-check"></i></div>
+                            <h3 class="text-3xl font-serif font-bold text-roma-900 mb-3">Protocolo Pronto</h3>
+                            <p class="text-sm text-neutral-dark mb-8 max-w-sm mx-auto">A análise biométrica identificou a compatibilidade química ideal para a estrutura do seu fio.</p>
+                            
+                            <form onsubmit="unlockResult(event)" class="space-y-6 max-w-sm mx-auto">
+                                <input type="text" id="nameInput" required class="w-full border-b border-neutral-mid p-3 text-sm focus:border-roma-900 focus:outline-none placeholder-gray-400 bg-transparent font-medium text-neutral-800 transition-colors rounded-none" placeholder="Nome Completo">
+                                <input type="tel" id="phoneInput" required class="w-full border-b border-neutral-mid p-3 text-sm focus:border-roma-900 focus:outline-none placeholder-gray-400 bg-transparent font-medium text-neutral-800 transition-colors rounded-none" placeholder="WhatsApp (XX) XXXXX-XXXX" maxlength="15">
+                                <button type="submit" class="w-full btn-metallic py-4 font-bold text-xs uppercase transition shadow-lg rounded-sm tracking-[0.2em]">Acessar Laudo Oficial</button>
+                                <p class="text-[9px] text-neutral-mid flex justify-center items-center gap-1"><i class="fas fa-lock"></i> Dados Criptografados</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 3: RESULTADO (FUNDO VINHO - VALOR/LUXO) -->
+        <section id="view-result" class="view-section bg-roma-900">
+            <!-- BANNER DE ESCASSEZ DINÂMICO (INICIA OCULTO) -->
+            <div id="offerBanner" class="bg-gold-gradient w-full py-3 text-center text-sm text-roma-900 font-bold fixed top-16 z-50 shadow-lg border-b-2 border-roma-900 opacity-0 transform -translate-y-full transition-all duration-1000 ease-out"></div>
+
+            <div class="max-w-4xl mx-auto px-4 md:px-6 py-10 pt-28 pb-40">
+                
+                <div class="prescription-paper p-8 md:p-14 relative border border-neutral-light shadow-float">
+                    <div class="flex flex-col md:flex-row justify-between items-start border-b border-neutral-light pb-8 mb-10">
+                        <div><h2 class="text-3xl md:text-5xl font-serif font-bold text-neutral-800 italic">Laudo Capilar</h2><p class="text-sm text-roma-900 font-bold mt-2 font-serif italic">Paciente: <span id="clientNameDisplay" class="text-neutral-800 not-italic font-sans font-normal uppercase tracking-wide text-xs ml-1"></span></p></div>
+                        <div class="text-right mt-4 md:mt-0"><div class="text-[9px] font-bold text-white bg-roma-900 px-3 py-1 inline-block mb-1 tracking-widest">CONFIDENCIAL</div><p class="text-[9px] font-bold text-neutral-mid uppercase tracking-widest">Protocolo #A99-X</p></div>
+                    </div>
+
+                    <!-- GRÁFICO BIOMÉTRICO (ESCALA MULTICOLOR) -->
+                    <div class="mb-14 relative">
+                        <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-dark mb-6 flex items-center gap-2"><i class="fas fa-microchip"></i> 1. Escala de Comprometimento</h4>
+                        <div class="bg-neutral-50 border border-neutral-light p-6 rounded-sm mb-6">
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-wider">Grau de Alerta</span>
+                                <span id="healthText" class="text-xl font-bold text-neutral-800">0%</span>
+                            </div>
+                            <!-- Barra Multicolor -->
+                            <div class="h-3 w-full bg-neutral-light rounded-sm overflow-hidden flex gap-[2px] p-[1px]" id="biometricBarContainer"></div>
+                            <div class="flex justify-between mt-2 text-[8px] font-bold text-neutral-mid uppercase tracking-widest">
+                                <span class="text-func-green">Saudável</span>
+                                <span class="text-func-yellow">Atenção</span>
+                                <span class="text-gold-bronze">Alerta</span>
+                                <span class="text-func-red">Crítico</span>
+                            </div>
+                        </div>
+                        <p id="hairAgeText" class="text-[10px] text-right text-func-red font-bold mb-4 hidden border border-func-red/20 bg-func-red/5 inline-block px-2 py-1 float-right rounded">Idade Biológica do Fio: +5 Anos</p>
+                        <div class="clear-both"></div>
+                        
+                        <!-- Box Projeção Futura (Aversão à Perda) -->
+                        <div id="futureProjectionBox" class="bg-func-red/10 border-l-4 border-func-red p-4 mb-6 rounded-r-sm hidden">
+                            <h5 class="text-xs font-bold text-func-red uppercase mb-1"><i class="fas fa-chart-line mr-1"></i> Projeção de Dano (30 Dias)</h5>
+                            <p class="text-xs text-roma-900">Sem intervenção imediata, a estrutura cortical colapsará, resultando em <strong>quebra química irreversível de até 40%</strong> do comprimento.</p>
+                        </div>
+
+                        <div class="bg-white p-6 border-l-2 border-roma-900 text-neutral-800 shadow-sm">
+                            <h3 id="diagnosisTitle" class="font-serif font-bold text-2xl mb-3 text-roma-900"></h3>
+                            <p id="diagnosisDesc" class="text-sm leading-relaxed font-medium text-neutral-dark"></p>
+                        </div>
+                    </div>
+
+                    <!-- PROTOCOLO HÍBRIDO -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14" id="hybridProtocolContainer">
+                        
+                        <!-- CARD 1: SALÃO (LUXO ESCURO) -->
+                        <div class="bg-roma-950 text-white p-8 relative overflow-hidden shadow-2xl group cursor-pointer border border-gold-dark/30" onclick="toggleSelection('phase1')">
+                            <div class="absolute top-4 right-4 z-20">
+                                <input type="checkbox" id="checkPhase1" class="card-checkbox" checked onchange="updateStickyFooter()">
+                            </div>
+                            <div class="relative z-10 opacity-90 group-hover:opacity-100 transition">
+                                <span class="text-[9px] font-bold text-gold-classic uppercase tracking-[0.2em] border border-gold-classic/30 px-2 py-1 rounded-sm">Fase 1</span>
+                                <h4 class="text-2xl font-serif font-bold text-white mt-4 mb-2">Intervenção Clínica</h4>
+                                <div class="bg-white/5 p-5 border-l-2 border-gold-classic backdrop-blur-sm mb-4 mt-6">
+                                    <h6 id="serviceTitle" class="font-bold text-gold-classic text-sm mb-2 uppercase tracking-wider"></h6>
+                                    <p id="serviceDesc" class="text-xs text-neutral-light leading-relaxed font-light"></p>
+                                </div>
+                                <div class="bg-gold-classic/10 border border-gold-classic/20 p-2 rounded text-center mb-4">
+                                    <p class="text-[9px] text-gold-classic font-bold uppercase"><i class="fas fa-gift mr-1"></i> Bônus VIP Incluso</p>
+                                    <p class="text-[8px] text-white">Análise com Tricoscópio Digital (Cortesia)</p>
+                                </div>
+                                <p class="text-[9px] text-neutral-mid italic mt-2"><i class="fas fa-check-circle mr-1 text-gold-classic"></i> Selecionado para Agendamento</p>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2: HOME CARE (VINHO) -->
+                        <div class="bg-roma-900 text-white p-8 relative overflow-hidden shadow-2xl group cursor-pointer border border-roma-950" onclick="toggleSelection('phase2')">
+                            <div class="absolute top-4 right-4 z-20">
+                                <input type="checkbox" id="checkPhase2" class="card-checkbox" checked onchange="updateStickyFooter()">
+                            </div>
+                            <div class="relative z-10 opacity-90 group-hover:opacity-100 transition">
+                                <span class="text-[9px] font-bold text-neutral-off uppercase tracking-[0.2em] border border-neutral-off/20 px-2 py-1 rounded-sm">Fase 2</span>
+                                <h4 class="text-2xl font-serif font-bold text-white mt-4 mb-2">Home Care</h4>
+                                <div id="productsList" class="space-y-3 mb-4 mt-6"></div>
+                                <p class="text-[9px] text-neutral-mid italic mt-4"><i class="fas fa-check-circle mr-1 text-white"></i> Selecionado para Pedido</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="alchemyTip" class="text-xs text-neutral-dark p-6 border border-gold-classic/30 bg-gold-classic/5 italic font-medium leading-relaxed text-center relative mx-auto max-w-lg"></div>
+                </div>
+            </div>
+
+            <!-- STICKY FOOTER -->
+            <div class="fixed bottom-0 left-0 w-full bg-roma-950 border-t border-roma-900 p-4 shadow-[0_-5px_20px_rgba(0,0,0,0.5)] z-50 flex flex-col md:flex-row items-center justify-between gap-4 max-w-4xl mx-auto left-0 right-0">
+                <div class="text-xs text-neutral-light hidden md:block">
+                    <p>Itens selecionados: <strong id="selectionCount" class="text-gold-classic">2 (Combo)</strong></p>
+                </div>
+                <button onclick="sendFinalWhatsApp()" id="finalActionButton" class="w-full md:w-auto flex-grow btn-metallic py-4 px-8 font-bold text-xs uppercase tracking-[0.2em] shadow-lg flex items-center justify-center gap-3 rounded-sm text-roma-950 hover:shadow-gold">
+                    <i class="fab fa-whatsapp text-lg"></i> <span id="btnText">QUERO O COMBO COMPLETO</span>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // --- TIMER GLOBAL ---
+        let timerInterval;
+
+        function startTimer(duration, display) {
+            let timer = duration, minutes, seconds;
+            timerInterval = setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = 0; 
+                    clearInterval(timerInterval);
+                    const banner = document.getElementById('offerBanner');
+                    if(banner) {
+                        banner.innerHTML = "⏱️ OFERTA EXPIRADA.";
+                        banner.classList.replace('bg-gold-classic', 'bg-neutral-dark');
+                        banner.classList.replace('text-roma-900', 'text-white');
+                    }
+                }
+            }, 1000);
+        }
+
+        function changeView(viewId) {
+            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
+            document.getElementById(viewId).classList.add('active');
+            window.scrollTo(0,0);
+            
+            // LÓGICA DO ATRASO DA OFERTA (TEATRO DE VENDAS)
+            if (viewId === 'view-result') {
+                setTimeout(() => {
+                    const banner = document.getElementById('offerBanner');
+                    banner.classList.remove('opacity-0', '-translate-y-full'); // Remove classe de ocultação
+                    
+                    // Inicia o timer APÓS a revelação
+                    const fiveMinutes = 60 * 5; 
+                    const display = document.createElement('span');
+                    display.id = 'countdownTimer';
+                    display.innerText = "05:00";
+                    
+                    // Insere o conteúdo dinâmico
+                    banner.innerHTML = `<i class="fas fa-crown mr-2 animate-pulse text-roma-900"></i> OFERTA RELÂMPAGO: <strong>${userData.offerType}</strong> (Salão + Kit) com 20% OFF! Expira em `;
+                    banner.appendChild(display);
+                    
+                    if (!timerInterval) startTimer(fiveMinutes, display);
+                    
+                }, 8000); // 8 SEGUNDOS DE ATRASO
+            }
+        }
+
+        let userData = {
+            history: [], objective: '', problems: [], habit: '', name: '', 
+            texture: '', density: '', 
+            finalResultName: '', finalProducts: '', finalService: '', finalHistory: '',
+            offerType: '' 
+        };
+
+        const phoneInput = document.getElementById('phoneInput');
+        phoneInput.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            if (value.length > 10) value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+            else if (value.length > 6) value = value.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+            else if (value.length > 2) value = value.replace(/^(\d{2})(\d{0,5}).*/, '($1) $2');
+            e.target.value = value;
+        });
+
+        // --- NAVIGATION & LOGIC ---
+        function toggleHistory(el, val) {
+            if (val === 'natural') {
+                userData.history = ['natural']; 
+                document.querySelectorAll('#step1 .option-card').forEach(card => {
+                    card.classList.remove('selected');
+                    card.querySelector('.checkbox-indicator').classList.remove('bg-gold-classic', 'border-gold-classic');
+                });
+                el.classList.add('selected');
+                el.querySelector('.checkbox-indicator').classList.add('bg-gold-classic', 'border-gold-classic');
+                return;
+            } else {
+                if (userData.history.includes('natural')) {
+                    userData.history = userData.history.filter(h => h !== 'natural');
+                    const naturalBtn = document.querySelector(`button[onclick="toggleHistory(this, 'natural')"]`);
+                    if(naturalBtn) {
+                        naturalBtn.classList.remove('selected');
+                        naturalBtn.querySelector('.checkbox-indicator').classList.remove('bg-gold-classic', 'border-gold-classic');
+                    }
+                }
+            }
+
+            if (userData.history.includes(val)) {
+                userData.history = userData.history.filter(h => h !== val);
+                el.classList.remove('selected');
+                el.querySelector('.checkbox-indicator').classList.remove('bg-gold-classic', 'border-gold-classic');
+            } else {
+                userData.history.push(val);
+                el.classList.add('selected');
+                el.querySelector('.checkbox-indicator').classList.add('bg-gold-classic', 'border-gold-classic');
+            }
+        }
+
+        function finishStep1() { if (userData.history.length === 0) { alert("Selecione pelo menos uma opção."); return; } nextStep('step1', 'step2', '25%'); }
+        function selectObjective(val) { userData.objective = val; nextStep('step2', 'step3', '50%'); }
+        
+        function toggleProblem(el, val) {
+            if (val === 'nenhum_sintoma') {
+                userData.problems = ['nenhum_sintoma'];
+                document.querySelectorAll('#step3 .problem-item').forEach(item => {
+                    item.classList.remove('border-gold-classic', 'bg-gold-shine/20');
+                    item.querySelector('i').classList.remove('text-roma-900');
+                });
+                el.classList.add('border-gold-classic', 'bg-gold-shine/20');
+                el.querySelector('i').classList.add('text-roma-900');
+                return;
+            } else {
+                if (userData.problems.includes('nenhum_sintoma')) {
+                    userData.problems = [];
+                    const noneBtn = document.querySelector(`div[onclick="toggleProblem(this, 'nenhum_sintoma')"]`);
+                    if(noneBtn) {
+                        noneBtn.classList.remove('border-gold-classic', 'bg-gold-shine/20');
+                        noneBtn.querySelector('i').classList.remove('text-roma-900');
+                    }
+                }
+            }
+
+            if (userData.problems.includes(val)) {
+                userData.problems = userData.problems.filter(p => p !== val);
+                el.classList.remove('border-gold-classic', 'bg-gold-shine/20');
+                el.querySelector('i').classList.remove('text-roma-900');
+            } else {
+                userData.problems.push(val);
+                el.classList.add('border-gold-classic', 'bg-gold-shine/20');
+                el.querySelector('i').classList.add('text-roma-900');
+            }
+        }
+
+        function goToHairType() { 
+            if (userData.problems.length === 0) { alert("Selecione pelo menos um sintoma."); return; } 
+            nextStep('step3', 'step3_5', '60%'); 
+        }
+
+        function selectTexture(el, val) {
+            userData.texture = val;
+            document.querySelectorAll('.texture-btn').forEach(btn => btn.classList.remove('selected', 'border-gold-classic', 'bg-gold-shine/20'));
+            el.classList.add('selected', 'border-gold-classic', 'bg-gold-shine/20');
+        }
+
+        function selectDensity(el, val) {
+            userData.density = val;
+            document.querySelectorAll('.density-btn').forEach(btn => btn.classList.remove('selected', 'border-gold-classic', 'bg-gold-shine/20'));
+            el.classList.add('selected', 'border-gold-classic', 'bg-gold-shine/20');
+        }
+
+        function goToHabits() {
+            if (!userData.texture || !userData.density) { alert("Por favor, selecione textura e espessura."); return; }
+            nextStep('step3_5', 'step4', '75%'); 
+        }
+        
+        function selectHabit(val) { userData.habit = val; startProcessing(); }
+        function nextStep(current, next, progress) { document.getElementById(current).classList.add('hidden'); document.getElementById(next).classList.remove('hidden'); document.getElementById('progressBar').style.width = progress; }
+        
+        function startProcessing() {
+            document.getElementById('step4').classList.add('hidden'); 
+            document.getElementById('step5').classList.remove('hidden'); 
+            document.getElementById('progressBar').style.width = '90%';
+            
+            const msgs = ["Mapeando estrutura...", "Analisando porosidade...", "Calculando bio-compatibilidade..."];
+            let i = 0; 
+            const intervalId = setInterval(() => { 
+                const el = document.getElementById('loadingText');
+                if(el && i < 3) el.innerText = msgs[i++]; 
+            }, 1000);
+            
+            setTimeout(() => { 
+                clearInterval(intervalId); 
+                document.getElementById('step5').classList.add('hidden'); 
+                document.getElementById('step6').classList.remove('hidden'); 
+            }, 3500);
+        }
+        
+        function unlockResult(e) {
+            e.preventDefault();
+            if (phoneInput.value.length < 14) { alert("Digite um WhatsApp válido"); return; }
+            userData.name = document.getElementById('nameInput').value;
+            changeView('view-result');
+            calculateResult();
+        }
+
+        // --- BRAIN LOGIC ---
+        function calculateResult() {
+            document.getElementById('clientNameDisplay').innerText = userData.name;
+            const hasBlonde = userData.history.includes('descolorido');
+            const hasStraight = userData.history.includes('alisado');
+            const isNatural = userData.history.includes('natural');
+            const isDoubleProcessed = hasBlonde && hasStraight;
+            const hasCritical = userData.problems.includes('elastico') || userData.problems.includes('quebrando');
+            const hasCut = userData.problems.includes('pontas_espigadas');
+            const hasControl = userData.problems.includes('frizz') || userData.problems.includes('volume');
+            const hasDry = userData.problems.includes('ressecado');
+            const hasOpaque = userData.problems.includes('opaco');
+            const hasNone = userData.problems.includes('nenhum_sintoma');
+            
+            // Pega o objetivo
+            const goal = userData.objective; // 'descobrir', 'recuperar', 'crescimento', 'brilho'
+            
+            let scoreAdjustment = 0;
+            if (userData.density === 'fino') scoreAdjustment += 15; 
+            if (userData.density === 'grosso') scoreAdjustment -= 10; 
+            
+            let result = { color: '', score: 0, title: '', desc: '', service: {}, products: [], alchemy: '', offerName: '' };
+
+            // 1. CRITICAL (RED) - Overrides All
+            if (hasCritical || (isDoubleProcessed && hasDry)) {
+                result.score = Math.min(95, 80 + scoreAdjustment); 
+                result.title = "Colapso Estrutural: Risco Iminente";
+                result.desc = `Seu fio ${userData.texture.toUpperCase()} apresenta ruptura crítica. Mesmo que seu foco seja ${goal}, precisamos salvar a estrutura primeiro.`;
+                result.service = { title: "RECONSTRUÇÃO BIO-MOLECULAR", desc: "Protocolo clínico de religamento de pontes e reposição de carbono." };
+                result.products = [{ name: "Shampoo Reconstrutor", type: "Limpeza" }, { name: "Master Repair SOS", type: "Blindagem" }, { name: "Óleo Reparador", type: "Proteção" }];
+                result.alchemy = "Use o Master Repair puro na primeira aplicação.";
+                document.getElementById('hairAgeText').classList.remove('hidden');
+                document.getElementById('hairAgeText').innerText = "Idade Biológica: +8 Anos";
+                document.getElementById('futureProjectionBox').classList.remove('hidden');
+                result.offerName = "RESGATE DE EMERGÊNCIA (UTI)";
+            } 
+            // 2. CUT NEEDED (High Priority)
+            else if (hasCut) {
+                result.score = 80 + scoreAdjustment; 
+                result.title = "Alerta: Tricoptilose";
+                result.desc = `Fissuras nas pontas. Para atingir seu objetivo (${goal}), precisamos remover o dano mecânico primeiro.`;
+                result.service = { title: "CORTE TERAPÊUTICO", desc: "Remoção de pontas duplas sem tirar comprimento." };
+                result.products = [{ name: "Shampoo Nutritivo", type: "Preparação" }, { name: "Kit Ampolas Pós-Corte", type: "Cicatrização" }, { name: "Leave-in Blindagem", type: "Proteção" }];
+                result.alchemy = "Aplique a Ampola nas pontas.";
+                document.getElementById('futureProjectionBox').classList.remove('hidden');
+                result.offerName = "COMBO CORTE + BLINDAGEM";
+            }
+            // 3. SMART ROUTING (Objective + Pain)
+            else if (goal === 'crescimento') {
+                 if (hasDry || hasControl) {
+                    result.score = 60 + scoreAdjustment;
+                    result.title = "Projeto Crescimento: Fortalecimento Hídrico";
+                    result.desc = "Seu cabelo está seco e quebra antes de ganhar comprimento. Foco em hidratação e resistência.";
+                    result.service = { title: "CRONOGRAMA DE CRESCIMENTO", desc: "Estimulação do bulbo e fortalecimento do comprimento." };
+                    result.products = [{ name: "Shampoo Força", type: "Estimulante" }, { name: "Máscara de Nutrição", type: "Resistência" }, { name: "Tônico Capilar", type: "Raiz" }];
+                    result.alchemy = "Massageie o couro cabeludo com o tônico.";
+                    result.offerName = "COMBO PROJETO RAPUNZEL";
+                 } else {
+                    result.score = 15;
+                    result.title = "Projeto Crescimento: Aceleração";
+                    result.desc = "Fio saudável. Vamos focar em acelerar o crescimento e manter as pontas cheias.";
+                    result.service = { title: "TERAPIA DE CRESCIMENTO (LASER)", desc: "Estimulação sanguínea para aceleração." };
+                    result.products = [{ name: "Shampoo Bomba", type: "Crescimento" }, { name: "Máscara de Força", type: "Tratamento" }, { name: "Óleo de Pontas", type: "Proteção" }];
+                    result.alchemy = "Use o óleo nas pontas diariamente para evitar corte.";
+                    result.offerName = "COMBO FORÇA TOTAL";
+                 }
+            }
+            else if (goal === 'brilho' || hasOpaque) {
+                result.score = 50 + scoreAdjustment; 
+                result.title = "Oxidação Cuticular";
+                result.desc = `Cutículas desalinhadas no fio ${userData.texture.toUpperCase()} impedem a reflexão da luz e o brilho que você deseja.`;
+                result.service = { title: "BANHO DE BRILHO / GLOSS", desc: "Revitalização de cor e selagem ácida para reflexão de luz." };
+                result.products = [{ name: "Shampoo de Brilho", type: "Polimento" }, { name: "Ampola de Ouro", type: "Tratamento" }, { name: "Spray de Brilho", type: "Final" }];
+                result.alchemy = "Aplique a Ampola antes.";
+                result.offerName = "COMBO GLOW PREMIUM";
+            }
+            // 4. Default Pains if no specific goal override
+            else if (hasControl) {
+                result.score = 60 + scoreAdjustment; 
+                result.title = "Desnutrição Lipídica";
+                result.desc = `Carência de lipídios no fio ${userData.texture.toUpperCase()}. Ele expande buscando umidade.`;
+                result.service = { title: "REALINHAMENTO TÉRMICO / BOTOX", desc: "Reposição de massa com alinhamento." };
+                result.products = [{ name: "Shampoo Disciplinante", type: "Controle" }, { name: "Máscara Nutrição", type: "Carga" }, { name: "Ampola de Ouro", type: "Brilho" }];
+                result.alchemy = "Fusão Lipídica na Máscara.";
+                result.offerName = "COMBO CONTROLE ABSOLUTO";
+            } else if (hasDry) {
+                result.score = 40 + scoreAdjustment; 
+                result.title = "Porosidade Crônica";
+                result.desc = `Perda acelerada de água no fio ${userData.texture.toUpperCase()}. Toque áspero.`;
+                result.service = { title: "HIDRATAÇÃO OZONIZADA", desc: "Injeção profunda de água." };
+                result.products = [{ name: "Shampoo Hidratante", type: "Limpeza" }, { name: "Cronograma Express", type: "Reposição" }, { name: "Condicionador Selante", type: "Fechamento" }];
+                result.alchemy = "Alterne as ampolas.";
+                document.getElementById('futureProjectionBox').classList.remove('hidden');
+                result.offerName = "COMBO HIDRATAÇÃO 3D";
+            } else {
+                result.score = 15 + scoreAdjustment; 
+                result.title = "Estabilidade Capilar";
+                result.desc = "Excelente integridade. O foco do protocolo é prevenção e estética.";
+                result.service = { title: "SPA CAPILAR DETOX", desc: "Estimulação do couro cabeludo." };
+                result.products = [{ name: "Shampoo de Brilho", type: "Limpeza" }, { name: "Ampola de Ouro", type: "Glow" }];
+                result.alchemy = "Use como finalizador térmico.";
+                result.offerName = "COMBO SPA DAY";
+                document.getElementById('hairAgeText').innerText = "Idade Biológica: Compatível";
+                document.getElementById('hairAgeText').classList.remove('hidden', 'text-func-red', 'bg-func-red/5', 'border-func-red/20');
+                document.getElementById('hairAgeText').classList.add('text-func-green', 'bg-func-green/5', 'border-func-green/20');
+            }
+
+            userData.finalResultName = result.title;
+            userData.finalProducts = result.products.map(p => p.name).join(', ');
+            userData.finalService = result.service.title;
+            userData.finalHistory = userData.history.join(', ');
+            userData.offerType = result.offerName;
+
+            // UPDATE DYNAMIC BANNER
+            document.getElementById('offerBanner').innerHTML = `<i class="fas fa-crown mr-2 animate-pulse text-roma-900"></i> OFERTA RELÂMPAGO: <strong>${result.offerName}</strong> (Salão + Kit) com 20% OFF! Expira em <span id="countdownTimer">05:00</span>.`;
+
+            // RENDER BAR
+            const barContainer = document.getElementById('biometricBarContainer');
+            barContainer.innerHTML = '';
+            for(let i=0; i<50; i++) {
+                const seg = document.createElement('div');
+                seg.className = 'bio-segment';
+                if ((i * 2) < result.score) {
+                    seg.classList.add('active');
+                }
+                barContainer.appendChild(seg);
+            }
+            
+            document.getElementById('healthText').innerText = result.score + '%';
+            document.getElementById('diagnosisTitle').innerText = result.title;
+            document.getElementById('diagnosisDesc').innerText = result.desc;
+            document.getElementById('serviceTitle').innerText = result.service.title;
+            document.getElementById('serviceDesc').innerText = result.service.desc;
+            
+            const list = document.getElementById('productsList');
+            list.innerHTML = '';
+            result.products.forEach((prod, index) => {
+                list.innerHTML += `<div class="flex items-center gap-3 bg-white/10 p-3 rounded-sm border border-white/5 backdrop-blur-sm"><div class="text-[10px] font-bold text-roma-100 opacity-50">0${index+1}</div><div class="w-6 h-6 rounded-full bg-roma-900 text-white flex items-center justify-center text-[8px] border border-white/20"><i class="fas fa-check"></i></div><div><p class="text-[7px] uppercase tracking-wider text-gray-300 font-bold">${prod.type}</p><p class="text-xs font-bold text-white tracking-wide">${prod.name}</p></div></div>`;
+            });
+            document.getElementById('alchemyTip').innerHTML = `<i class="fas fa-flask text-gold-classic text-lg mb-2 block"></i><strong>Dica do Especialista:</strong> ${result.alchemy}`;
+            
+            updateStickyFooter();
+        }
+
+        // --- STICKY FOOTER LOGIC ---
+        function toggleSelection(phase) {
+            const checkbox = document.getElementById(phase === 'phase1' ? 'checkPhase1' : 'checkPhase2');
+            checkbox.checked = !checkbox.checked;
+            updateStickyFooter();
+        }
+
+        function updateStickyFooter() {
+            const p1 = document.getElementById('checkPhase1').checked;
+            const p2 = document.getElementById('checkPhase2').checked;
+            const btnText = document.getElementById('btnText');
+            const count = document.getElementById('selectionCount');
+
+            if (p1 && p2) {
+                btnText.innerText = "QUERO O " + userData.offerType;
+                count.innerText = "2 (Salão + Kit)";
+            } else if (p1) {
+                btnText.innerText = "AGENDAR PROCEDIMENTO";
+                count.innerText = "1 (Fase Clínica)";
+            } else if (p2) {
+                btnText.innerText = "PEDIR KIT HOME CARE";
+                count.innerText = "1 (Produtos)";
+            } else {
+                btnText.innerText = "SELECIONE UMA OPÇÃO";
+                count.innerText = "0";
+            }
+        }
+
+        function sendFinalWhatsApp() {
+            const p1 = document.getElementById('checkPhase1').checked;
+            const p2 = document.getElementById('checkPhase2').checked;
+            const phone = "5500000000000"; 
+            
+            if (!p1 && !p2) { alert("Selecione ao menos uma fase do tratamento."); return; }
+
+            // Adiciona feedback visual imediato
+            const btn = document.getElementById('finalActionButton');
+            btn.classList.remove('btn-metallic');
+            btn.classList.add('bg-neutral-dark', 'text-white', 'cursor-not-allowed');
+            btn.setAttribute('disabled', 'true');
+            document.getElementById('btnText').innerText = "MENSAGEM ENVIADA!";
+            
+            let actionText = "";
+            if (p1 && p2) actionText = `Quero aproveitar a oferta do *${userData.offerType}* (Salão + Kit).`;
+            else if (p1) actionText = `Gostaria apenas de *AGENDAR O PROCEDIMENTO DE SALÃO*: ${userData.finalService}.`;
+            else if (p2) actionText = `Gostaria apenas de encomendar o *KIT HOME CARE*: ${userData.finalProducts}.`;
+
+            const message = `Olá! Sou *${userData.name}*.\nFiz o diagnóstico Essência de Romã.\n\n*Diagnóstico:* ${userData.finalResultName}\n*Dano:* ${document.getElementById('healthText').innerText}\n*Tipo de Fio:* ${userData.texture}\n\n${actionText}\n\nAguardo valores.`;
+            
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
