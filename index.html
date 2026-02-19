@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DG Holding | Ecosystem 2026</title>
+    <title>DG Holding | Governance Portal 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -13,12 +13,13 @@
             --emerald: #00FF8A;
             --obsidian: #010101;
             --gold: #D4AF37;
-            /* Imagens Estratégicas */
+            /* Brand Assets Consolidado */
             --img-hero: url('https://calcularodadd.carrd.co/assets/images/image03.jpg?v=7c863935');
-            --img-formula: url('https://calcularodadd.carrd.co/assets/images/image01.jpg?v=460b0ab4');
+            --img-formula: url('https://calcularodadd.carrd.co/assets/images/image02.jpg?v=7c863935');
+            --img-shop: url('https://calcularodadd.carrd.co/assets/images/image03.jpg?v=7c863935');
             --img-factory: url('https://calcularodadd.carrd.co/assets/images/image04.jpg?v=7c863935');
             --img-ritual: url('https://calcularodadd.carrd.co/assets/images/image05.jpg?v=7c863935');
-            --img-equity: url('https://calcularodadd.carrd.co/assets/images/image02.jpg?v=7c863935');
+            --img-equity: url('https://calcularodadd.carrd.co/assets/images/image01.jpg?v=460b0ab4');
         }
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
@@ -37,12 +38,7 @@
             backdrop-filter: blur(20px); 
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .subdomain-tag {
-            font-family: monospace;
-            color: var(--cyan);
-            font-size: 11px;
-            letter-spacing: 1px;
-        }
+        .subdomain-tag { font-family: monospace; color: var(--cyan); font-size: 11px; letter-spacing: 1px; }
         .gradient-text {
             background: linear-gradient(135deg, var(--gold), #FFFFFF, var(--cyan));
             -webkit-background-clip: text;
@@ -94,19 +90,35 @@
         }
         .section-label { font-size: 10px; font-weight: 800; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; display: block; }
         
-        /* FÓRMULA ASSETS */
+        /* Fórmulas e Ativos */
         .asset-card {
             border-left: 1px solid rgba(212, 175, 55, 0.1);
-            padding: 20px;
+            padding: 24px;
             background: linear-gradient(90deg, rgba(255, 255, 255, 0.01), transparent);
             transition: all 0.4s ease;
-            position: relative;
         }
         .asset-card.glow-active {
             border-left-color: var(--pink);
             background: rgba(255, 0, 128, 0.05);
+            box-shadow: 0 0 30px rgba(255, 0, 128, 0.1);
             transform: translateX(10px);
         }
+        
+        /* Escala e Reinvestimento */
+        .reinvest-bar {
+            height: 12px;
+            border-radius: 99px;
+            background: #1a1a1a;
+            display: flex;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .bar-cost { width: 50%; background: var(--cyan); box-shadow: 0 0 15px var(--cyan); }
+        .bar-ads { width: 20%; background: var(--pink); box-shadow: 0 0 15px var(--pink); }
+        .bar-profit { width: 30%; background: var(--emerald); box-shadow: 0 0 15px var(--emerald); }
+        
+        .price-table td { padding: 18px 15px; border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 11px; }
+        .price-table th { padding: 15px; text-align: left; font-size: 9px; text-transform: uppercase; color: #666; letter-spacing: 2px; }
 
         .vs-card {
             background: rgba(0, 209, 255, 0.03);
@@ -115,25 +127,24 @@
             border-radius: 15px;
             text-align: center;
         }
-
         .shop-hero-img {
             width: 100%;
             border-radius: 40px;
             box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            transition: transform 0.5s ease;
         }
-        .price-table td { padding: 18px 12px; border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 11px; }
-        .price-table th { padding: 14px; text-align: left; font-size: 9px; text-transform: uppercase; color: #666; letter-spacing: 2px; }
+        .shop-hero-img:hover { transform: scale(1.02); }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- PORTAL MASTER NAVIGATION -->
+    <!-- NAVIGATION MASTER DG -->
     <nav class="fixed w-full z-[100] nav-blur py-5 px-8 md:px-16 flex justify-between items-center">
         <div class="flex items-center gap-4">
             <div class="w-9 h-9 rounded-xl bg-white flex items-center justify-center font-black text-black text-xl shadow-lg">DG</div>
             <div class="hidden sm:block text-left leading-none">
                 <span class="text-xs font-bold tracking-[0.3em] uppercase text-white">Dias Grabski</span><br>
-                <span class="text-[7px] text-gray-500 uppercase tracking-[0.4em] font-black">Holding System</span>
+                <span class="text-[7px] text-gray-500 uppercase tracking-[0.4em] font-black">Holding Ecosystem</span>
             </div>
         </div>
         <div class="flex gap-4 md:gap-8 text-[9px] font-black uppercase tracking-[0.2em]" id="nav-portal">
@@ -147,7 +158,7 @@
     </nav>
 
     <div class="pt-24 h-screen">
-        <!-- MODULO: visao.dg -->
+        <!-- MODULO: visao.dg (REALINHAMENTO UNIDADES) -->
         <main id="page-visao" class="page-content active">
             <div class="relative h-full flex flex-col items-center justify-center text-center px-6 min-h-[85vh]">
                 <div class="module-bg" style="background-image: var(--img-hero)"></div>
@@ -157,94 +168,94 @@
                     <h1 class="text-6xl md:text-[130px] font-extralight tracking-tighter leading-none mb-10 text-white">
                         Estética <br> <span class="gradient-text font-bold italic">Sistêmica.</span>
                     </h1>
+                    
                     <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
-                        <div class="p-6 glass-panel border-pink-500/20"><h6 class="text-[10px] font-black text-pink-500 uppercase italic">Roman Hair</h6><p class="text-[8px] text-gray-400 font-bold italic">Chapecó</p></div>
-                        <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase italic">Essência Rara</h6><p class="text-[8px] text-gray-400 font-bold italic">Caxias do Sul</p></div>
+                        <div class="p-6 glass-panel border-pink-500/20"><h6 class="text-[10px] font-black text-pink-500 uppercase italic">Roman Hair</h6><p class="text-[8px] text-gray-400 font-bold italic">Thiago Dias | Chapecó</p></div>
+                        <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase italic">Essência Rara</h6><p class="text-[8px] text-gray-400 font-bold italic">Vera Dias | Caxias</p></div>
                         <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase italic">Studio SD</h6><p class="text-[8px] text-gray-400 font-bold italic">Samara | Caxias</p></div>
                         <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase italic">Grabski</h6><p class="text-[8px] text-gray-400 font-bold italic">Jessica | Lages</p></div>
-                        <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase italic">Mony Liss</h6><p class="text-[8px] text-gray-400 font-bold italic">Capão da Canoa</p></div>
+                        <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase italic">Mony Liss</h6><p class="text-[8px] text-gray-400 font-bold italic">Andreia & Simone</p></div>
                     </div>
-                    <button onclick="switchPage('formula')" class="bg-white text-black px-14 py-6 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all duration-500">O Ativo Real</button>
+
+                    <button onclick="switchPage('formula')" class="bg-white text-black px-14 py-6 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all duration-500 shadow-2xl shadow-pink-500/20">Auditoria do Ativo Real</button>
                 </div>
             </div>
         </main>
 
-        <!-- MODULO: formula.dg (RECONSTRUTOR TÉCNICO) -->
+        <!-- MODULO: formula.dg (ATUALIZADO COM JUSTIFICATIVA LÍQUIDA) -->
         <main id="page-formula" class="page-content">
             <div class="container mx-auto px-10 max-w-7xl py-20">
                 <div class="grid lg:grid-cols-2 gap-20 items-center">
                     <div class="text-left">
                         <span class="subdomain-tag mb-4 block italic">https://formula.dg.holding</span>
-                        <span class="section-label">The Missing Link</span>
-                        <h2 class="text-5xl font-extralight uppercase tracking-tighter mb-8 text-white italic italic">O Primeiro <br> <span class="text-pink-500">Ativo Real.</span></h2>
+                        <span class="section-label italic">Estratégia de Produto #01</span>
+                        <h2 class="text-5xl font-extralight uppercase tracking-tighter mb-8 text-white italic">O Primeiro <br> <span class="text-pink-500 font-bold">Ativo Real.</span></h2>
                         
-                        <div class="audit-box border-emerald-500/20 bg-emerald-500/5 mb-10">
-                            <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-4">Por que o Suplemento Bebível?</h4>
-                            <div class="grid grid-cols-3 gap-4">
-                                <div class="vs-card">
-                                    <span class="text-[9px] font-black text-gray-500 uppercase block mb-2">Cápsulas</span>
-                                    <p class="text-[10px] text-red-400 italic">Lenta absorção. Aspecto medicamentoso.</p>
-                                </div>
-                                <div class="vs-card">
-                                    <span class="text-[9px] font-black text-gray-500 uppercase block mb-2">Gomas</span>
-                                    <p class="text-[10px] text-orange-400 italic">Cheio de açúcar e gelatina animal.</p>
-                                </div>
-                                <div class="vs-card border-pink-500/30 bg-pink-500/5">
-                                    <span class="text-[9px] font-black text-pink-500 uppercase block mb-2">Farma Beauty</span>
-                                    <p class="text-[10px] text-emerald-400 font-bold italic">Absorção 5x maior. Ritual de Luxo.</p>
-                                </div>
+                        <div class="audit-box border-emerald-500/20 bg-emerald-500/5 mb-8">
+                            <h4 class="text-white font-bold text-[10px] uppercase tracking-widest mb-4">Por que o Suplemento Bebível?</h4>
+                            <div class="grid grid-cols-3 gap-3 text-center">
+                                <div class="vs-card"><span class="text-[8px] font-black text-red-500 block mb-1">Cápsulas</span><p class="text-[9px] text-gray-500 italic">Absorção Lenta. Baixa Experiência.</p></div>
+                                <div class="vs-card"><span class="text-[8px] font-black text-orange-500 block mb-1">Gomas</span><p class="text-[9px] text-gray-500 italic">Excesso de Açúcar. Custo Ineficiente.</p></div>
+                                <div class="vs-card border-pink-500/30 bg-pink-500/10"><span class="text-[8px] font-black text-pink-500 block mb-1 uppercase">Lata DG</span><p class="text-[9px] text-white font-bold italic">Bio-Disponibilidade de 98%.</p></div>
                             </div>
                         </div>
 
-                        <div class="space-y-4">
+                        <div class="space-y-4 mb-8">
                             <div class="asset-card glass-panel glow-active">
-                                <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-1 italic">Produção Chapecó-SC (Slok)</h4>
-                                <p class="text-[10px] text-gray-400 italic leading-relaxed uppercase">Fábrica com registro MAPA, padrão exportação e logística 24h para o Hub Thiago Dias.</p>
+                                <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-2 italic">Infraestrutura Chapecó-SC</h4>
+                                <p class="text-[10px] text-gray-400 italic uppercase">Produzido pela Slok com registro total no MAPA. 100% Viável e pronto para escala industrial imediata sob comando de Thiago Dias.</p>
                             </div>
                             <div class="asset-card">
-                                <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-1 italic">Ativos: Biotina, Colagénio & Minerais</h4>
-                                <p class="text-[10px] text-gray-400 italic leading-relaxed uppercase">A ciência que as nossas clientes já pedem. Temos o salão, temos a demanda, agora temos o produto.</p>
+                                <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-2 italic">Conversão de Autoridade</h4>
+                                <p class="text-[10px] text-gray-400 italic uppercase">Já temos o salão e a cliente. O produto é o elo final que transforma o tempo de cadeira em faturamento bruto industrial.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden lg:block relative">
-                        <img src="https://calcularodadd.carrd.co/assets/images/image01.jpg?v=460b0ab4" class="w-full rounded-[40px] shadow-2xl opacity-90 filter contrast-125">
-                        <div class="absolute -bottom-8 -right-8 p-8 glass-panel border-pink-500/30">
-                            <span class="text-4xl">🔬</span>
-                            <p class="text-[10px] font-black text-white uppercase mt-2 italic">Certificado MAPA</p>
+                    <div class="relative group">
+                        <div class="p-2 glass-panel shadow-2xl overflow-hidden">
+                            <img src="https://calcularodadd.carrd.co/assets/images/image02.jpg?v=7c863935" class="w-full rounded-[25px] opacity-90 filter contrast-110 brightness-110" alt="Farma Beauty Formula">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 p-6 glass-panel border-pink-500/30 bg-black/80">
+                            <p class="text-[10px] font-black text-pink-500 uppercase tracking-widest italic">Science Powered by DG</p>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <!-- MODULO: shop.dg (VITRINE DE LUXO) -->
+        <!-- MODULO: shop.dg (O E-COMMERCE DE LUXO) -->
         <main id="page-shop" class="page-content">
             <div class="container mx-auto px-10 max-w-7xl py-12">
                 <div class="grid lg:grid-cols-2 gap-20 items-start">
                     <div class="sticky top-0">
                         <span class="subdomain-tag mb-4 block italic">https://shop.dg.holding</span>
-                        <img src="https://calcularodadd.carrd.co/assets/images/image03.jpg?v=7c863935" class="shop-hero-img" alt="Lata Farma Beauty">
-                    </div>
-                    
-                    <div class="space-y-12 pt-10">
-                        <div class="text-left">
-                            <h2 class="text-6xl font-extralight uppercase tracking-tighter text-white mb-4 italic">Farma <span class="text-pink-500 font-bold">Beauty.</span></h2>
-                            <p class="text-gray-500 text-lg font-light italic italic leading-relaxed italic">Suplemento em Lata (269ml). Zero açúcar. <br>Biotina B7 Concentrada + Colagénio Hidrolisado.</p>
+                        <img src="https://calcularodadd.carrd.co/assets/images/image03.jpg?v=7c863935" class="shop-hero-img" alt="Lata Showcase">
+                        <div class="mt-8 p-6 glass-panel border-white/5">
+                            <span class="section-label mb-2">Ativos Presentes</span>
+                            <div class="grid grid-cols-2 gap-4 text-[10px] font-bold text-gray-500 italic uppercase">
+                                <span>• Biotina B7</span>
+                                <span>• Colagénio Hidro</span>
+                                <span>• Ferro & Zinco</span>
+                                <span>• Vitamina E</span>
+                            </div>
                         </div>
-
+                    </div>
+                    <div class="space-y-12 pt-10 text-left">
+                        <h2 class="text-6xl font-extralight uppercase tracking-tighter text-white mb-4 italic">Farma <span class="text-pink-500 font-bold">Beauty.</span></h2>
+                        <p class="text-gray-500 text-lg font-light leading-relaxed italic">Suplementação líquida 269ml. Zero Açúcar. <br>Fórmula optimizada para reconstrução capilar sistémica.</p>
+                        
                         <div class="space-y-6">
-                            <div class="flex justify-between items-center p-8 glass-panel border-white/5">
-                                <div><h5 class="text-white font-bold text-xs uppercase italic tracking-widest italic">Unidade Ritual</h5><p class="text-[10px] text-gray-500 italic">Venda Cadeira / Impulso</p></div>
+                            <div class="flex justify-between items-center p-8 glass-panel border-white/5 hover:border-white/20 transition-all">
+                                <div><h5 class="text-white font-bold text-xs uppercase italic tracking-widest">Unidade Ritual</h5><p class="text-[10px] text-gray-500 italic">Venda Cadeira / Impulso</p></div>
                                 <span class="text-3xl font-black text-white italic">R$ 19,00</span>
                             </div>
                             <div class="flex justify-between items-center p-8 glass-panel border-pink-500/30 bg-pink-500/5">
-                                <div><h5 class="text-pink-500 font-black text-xs uppercase italic tracking-widest italic">Master Pack (6 Latas)</h5><p class="text-[10px] text-gray-400 italic">Tratamento Semanal Casa</p></div>
+                                <div><h5 class="text-pink-500 font-black text-xs uppercase italic tracking-widest">Master Pack (6 Unidades)</h5><p class="text-[10px] text-gray-400 italic">Tratamento Intensivo Casa</p></div>
                                 <span class="text-3xl font-black text-white italic">R$ 97,00</span>
                             </div>
-                            <div class="p-8 glass-panel border-emerald-500/20 bg-emerald-500/5 text-center">
-                                <span class="section-label text-emerald-400 mb-2 italic">Diferenciado Acima de 2 Packs</span>
-                                <h4 class="text-xl font-bold text-white uppercase italic tracking-widest mb-1 italic">R$ 179,00 (Save R$ 15,00)</h4>
+                            <div class="p-10 glass-panel border-emerald-500/20 bg-emerald-500/5 text-center">
+                                <span class="section-label text-emerald-400 mb-2">Oferta de Escala (Acima de 2 Packs)</span>
+                                <h4 class="text-2xl font-bold text-white uppercase italic tracking-widest mb-1">R$ 179,00 (Save R$ 15,00)</h4>
                             </div>
                         </div>
                     </div>
@@ -252,53 +263,76 @@
             </div>
         </main>
 
-        <!-- MODULO: factory.dg -->
+        <!-- MODULO: factory.dg (FATOR DE ESCALA INDUSTRIAL) -->
         <main id="page-factory" class="page-content">
-            <div class="container mx-auto px-10 max-w-5xl py-20 text-center">
+            <div class="container mx-auto px-10 max-w-6xl py-20 text-center">
                 <div class="module-bg" style="background-image: var(--img-factory); opacity: 0.1;"></div>
                 <span class="subdomain-tag mb-4 block italic">https://factory.dg.holding</span>
-                <h2 class="text-5xl font-extralight uppercase tracking-tighter italic text-white mb-20 z-10 italic">Tabela de <span class="text-emerald-400 font-bold">Escala.</span></h2>
-                <div class="glass-panel overflow-hidden relative z-10">
-                    <table class="w-full price-table text-left">
-                        <thead><tr class="bg-white/5"><th>Lote Industrial</th><th>Custo Un.</th><th>Total</th><th>Status</th></tr></thead>
+                <h2 class="text-5xl font-extralight uppercase tracking-tighter italic text-white mb-20 z-10">Fator de <span class="text-emerald-400 font-bold">Escala.</span></h2>
+                
+                <div class="glass-panel overflow-hidden relative z-10 text-left mb-20">
+                    <table class="w-full price-table">
+                        <thead><tr class="bg-white/5"><th>Lote / Volume</th><th>Custo Un.</th><th>Investimento Total</th><th>Status de Domínio</th></tr></thead>
                         <tbody class="text-gray-400 font-light italic">
-                            <tr class="bg-pink-500/5 text-white font-bold"><td>700 (Lote Piloto)</td><td>R$ 9,49</td><td>R$ 6.643,00</td><td class="text-pink-500 font-black uppercase text-[9px] italic">Kickoff Chapecó</td></tr>
-                            <tr><td>2.100 Latas</td><td>R$ 7,99</td><td>R$ 16.779,00</td><td class="text-[9px] font-black uppercase italic">Escala I</td></tr>
+                            <tr class="bg-pink-500/5 text-white font-bold"><td>700 (Lote Piloto)</td><td>R$ 9,49</td><td>R$ 6.643,00</td><td class="text-pink-500 font-black uppercase text-[9px] italic">Lançamento</td></tr>
+                            <tr><td>1.400 Latas</td><td>R$ 8,99</td><td>R$ 12.586,00</td><td class="text-[9px] font-black uppercase italic">Escala Regional</td></tr>
+                            <tr><td>2.100 Latas</td><td>R$ 7,99</td><td>R$ 16.779,00</td><td class="text-[9px] font-black uppercase italic">Escala Sul</td></tr>
+                            <tr class="bg-emerald-500/5 text-white"><td>5.600 Latas</td><td class="text-emerald-400 font-bold">R$ 6,99</td><td class="text-emerald-400 font-bold">R$ 39.144,00</td><td class="text-emerald-400 font-black uppercase text-[9px] italic text-center">Meta 90 Dias</td></tr>
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </main>
 
-        <!-- MODULO: ritual.dg -->
-        <main id="page-ritual" class="page-content">
-            <div class="container mx-auto px-10 max-w-6xl py-20 text-center">
-                <div class="module-bg" style="background-image: var(--img-ritual); opacity: 0.1;"></div>
-                <h2 class="text-5xl font-extralight uppercase tracking-tighter italic text-white leading-tight mb-20 z-10">O Ritual de <span class="text-pink-500 font-bold">Venda.</span></h2>
-                <div class="grid md:grid-cols-3 gap-8 relative z-10">
-                    <div class="p-10 glass-panel border-white/5">🥂 <h4 class="text-[10px] font-bold mt-4 uppercase italic italic italic italic">Welcome Drink</h4></div>
-                    <div class="p-10 glass-panel border-white/5">📱 <h4 class="text-[10px] font-bold mt-4 uppercase italic">QR Code Edu</h4></div>
-                    <div class="p-10 glass-panel border-white/5">🛒 <h4 class="text-[10px] font-bold mt-4 uppercase italic">Checkout</h4></div>
+                <div class="grid lg:grid-cols-2 gap-12 text-left relative z-10">
+                    <div class="p-10 glass-panel border-white/5">
+                        <span class="section-label text-white">Anatomia do Valor (R$ 19,00)</span>
+                        <div class="reinvest-bar"><div class="bar-cost"></div><div class="bar-ads"></div><div class="bar-profit"></div></div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center"><span class="text-[10px] font-black text-cyan-400 uppercase italic">Reposição Sagrada:</span><span class="text-xs font-bold italic text-white">R$ 9,49</span></div>
+                            <div class="flex justify-between items-center"><span class="text-[10px] font-black text-pink-500 uppercase italic">Marketing Blitz:</span><span class="text-xs font-bold italic text-white">R$ 3,80</span></div>
+                            <div class="flex justify-between items-center border-t border-white/5 pt-4"><span class="text-[10px] font-black text-emerald-400 uppercase italic">Lucro Holding:</span><span class="text-xs font-bold italic text-white">R$ 5,71</span></div>
+                        </div>
+                    </div>
+                    <div class="p-10 glass-panel border-emerald-500/20 bg-emerald-500/5 flex flex-col justify-center">
+                        <h4 class="text-3xl font-black text-white italic tracking-tighter mb-4">Reinvestimento de 100%</h4>
+                        <p class="text-sm text-gray-300 italic leading-relaxed italic">O lucro do Lote 01 (**R$ 13.300,00 faturamento**) é o motor para saltar de nível na tabela Slok. A Holding autofinancia o crescimento sem novos aportes.</p>
+                    </div>
                 </div>
             </div>
         </main>
 
-        <!-- MODULO: equity.dg -->
+        <!-- MODULO: ritual.dg (OPERAÇÃO) -->
+        <main id="page-ritual" class="page-content">
+            <div class="container mx-auto px-10 max-w-6xl py-20 text-center">
+                <div class="module-bg" style="background-image: var(--img-ritual); opacity: 0.1;"></div>
+                <h2 class="text-5xl font-extralight uppercase tracking-tighter italic text-white leading-tight mb-20 z-10 italic">O Ritual de <span class="text-pink-500 font-bold">Venda.</span></h2>
+                <div class="grid md:grid-cols-3 gap-8 relative z-10">
+                    <div class="p-12 glass-panel border-white/5">🥂 <h4 class="text-[11px] font-bold mt-4 uppercase italic italic italic italic">Welcome Drink</h4><p class="text-[9px] text-gray-500 mt-2 italic italic">Servido gelado no início do alisamento.</p></div>
+                    <div class="p-12 glass-panel border-white/5">📱 <h4 class="text-[11px] font-bold mt-4 uppercase italic">QR Code Edu</h4><p class="text-[9px] text-gray-500 mt-2 italic italic">Doutrinação técnica durante a pausa.</p></div>
+                    <div class="p-12 glass-panel border-white/5">🛒 <h4 class="text-[11px] font-bold mt-4 uppercase italic">Checkout</h4><p class="text-[9px] text-gray-500 mt-2 italic italic">Fechamento do pack para tratamento em casa.</p></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- MODULO: equity.dg (SOCIEDADE) -->
         <main id="page-equity" class="page-content">
             <div class="container mx-auto px-10 max-w-6xl py-20 text-center">
                 <div class="module-bg" style="background-image: var(--img-equity); opacity: 0.15;"></div>
-                <h2 class="text-5xl font-extralight uppercase tracking-tighter italic text-white mb-20 z-10">The <span class="text-pink-500 font-bold">Society Round.</span></h2>
-                <div class="glass-panel p-10 max-w-2xl mx-auto">
-                    <span class="text-[10px] font-black text-pink-500 uppercase tracking-widest block mb-4 italic">Aporte por Sócia</span>
+                <h2 class="text-5xl font-extralight uppercase tracking-tighter italic text-white mb-20 z-10 italic">The <span class="text-pink-500 font-bold">Society Round.</span></h2>
+                <div class="glass-panel p-16 max-w-2xl mx-auto mb-12">
+                    <span class="text-[10px] font-black text-pink-500 uppercase tracking-widest block mb-4 italic italic">Aporte Obrigatório por Sócia</span>
                     <h4 class="text-7xl font-black text-white italic tracking-tighter">R$ 2.000,00</h4>
-                    <p class="text-gray-500 mt-6 uppercase text-[9px] font-black italic">1 de 5 Sócias (Cota 8.2%)</p>
+                    <p class="text-gray-500 mt-6 uppercase text-[10px] font-black tracking-[0.2em] italic italic">Cota de 8.2% do Ecossistema Consolidado</p>
+                </div>
+                <div class="max-w-2xl mx-auto p-8 glass-panel border-cyan-500/20 text-left">
+                    <span class="section-label text-cyan-400 italic">Equity do Fundador (51%)</span>
+                    <p class="text-[10px] text-gray-400 italic leading-relaxed italic italic">Thiago Dias assume tráfego, design e gestão industrial a custo zero (R$ 35k/semestre em economia para as sócias).</p>
                 </div>
             </div>
         </main>
     </div>
 
     <!-- FOOTER -->
-    <footer class="fixed bottom-0 w-full py-10 bg-black/90 backdrop-blur-md text-center border-t border-white/5 z-[90]">
+    <footer class="fixed bottom-0 w-full py-10 bg-black/95 backdrop-blur-md text-center border-t border-white/5 z-[90]">
         <div class="flex flex-wrap justify-center gap-10 text-[8px] font-extrabold text-gray-600 uppercase tracking-[0.4em] italic text-white">
             <span class="text-pink-500 font-black">Thiago Dias (Roman Hair)</span>
             <span>Vera Dias (Essência Rara)</span>
@@ -311,10 +345,14 @@
     <script>
         function switchPage(pageId) {
             document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-            document.querySelector(`[data-page="${pageId}"]`).classList.add('active');
+            const activeLink = document.querySelector(`[data-page="${pageId}"]`);
+            if(activeLink) activeLink.classList.add('active');
+            
             document.querySelectorAll('.page-content').forEach(page => page.classList.remove('active'));
-            document.getElementById(`page-${pageId}`).classList.add('active');
-            document.getElementById(`page-${pageId}`).scrollTop = 0;
+            const activePage = document.getElementById(`page-${pageId}`);
+            if(activePage) activePage.classList.add('active');
+            
+            if(activePage) activePage.scrollTop = 0;
         }
         window.onload = () => { switchPage('visao'); };
     </script>
