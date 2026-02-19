@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DG Holding | Real Data Ecosystem 2026</title>
+    <title>DG Holding | Beauty & Energy Ecosystem 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -13,131 +13,149 @@
             --emerald: #00FF8A;
             --obsidian: #010101;
             --gold: #D4AF37;
-            /* Brand Assets - Coleção 2026 */
-            --img-hero: url('https://calcularodadd.carrd.co/assets/images/image13.jpg?v=8cbffaba');
-            --img-formula: url('https://calcularodadd.carrd.co/assets/images/image02.jpg?v=7c863935');
+            /* Asset Repository */
+            --img-hero: url('https://calcularodadd.carrd.co/assets/images/image13.jpg?v=4c040d6e');
+            --img-formula-01: url('https://calcularodadd.carrd.co/assets/images/image14.jpg?v=4c040d6e');
+            --img-formula-02: url('https://calcularodadd.carrd.co/assets/images/image15.jpg?v=bb51b588');
+            --img-formula-03: url('https://calcularodadd.carrd.co/assets/images/image16.jpg?v=bb51b588');
+            --img-shop-beauty: url('https://calcularodadd.carrd.co/assets/images/image03.jpg?v=7c863935');
+            --img-energy-day: url('https://calcularodadd.carrd.co/assets/images/image17.jpg?v=ef4b2e74');
+            --img-energy-night: url('https://calcularodadd.carrd.co/assets/images/image19.jpg?v=ef4b2e74');
             --img-factory: url('https://calcularodadd.carrd.co/assets/images/image04.jpg?v=7c863935');
             --img-ritual: url('https://calcularodadd.carrd.co/assets/images/image05.jpg?v=7c863935');
             --img-equity: url('https://calcularodadd.carrd.co/assets/images/image01.jpg?v=460b0ab4');
         }
+        
+        * { scrollbar-width: thin; scrollbar-color: var(--pink) transparent; }
+        
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
             background-color: var(--obsidian);
             color: #FFFFFF;
-            overflow: hidden; 
+            overflow: hidden;
+            height: 100vh;
         }
-        .glass-panel { 
-            background: rgba(255, 255, 255, 0.02); 
-            backdrop-filter: blur(25px); 
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 32px;
-        }
+
         .nav-blur { 
-            background: rgba(1, 1, 1, 0.98); 
+            background: rgba(1, 1, 1, 0.95); 
             backdrop-filter: blur(20px); 
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 1000;
         }
-        .subdomain-tag { font-family: monospace; color: var(--cyan); font-size: 11px; letter-spacing: 1px; }
+
+        .nav-link { 
+            transition: all 0.3s ease; 
+            cursor: pointer;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-link.active {
+            color: var(--pink) !important;
+            border-bottom-color: var(--pink);
+            font-weight: 800;
+        }
+
+        .page-content {
+            display: none;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+            padding-top: 40px;
+            padding-bottom: 250px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .page-content.active { display: block; }
+
+        .glass-panel { 
+            background: rgba(255, 255, 255, 0.02); 
+            backdrop-filter: blur(20px); 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+        }
+
         .gradient-text {
             background: linear-gradient(135deg, var(--gold), #FFFFFF, var(--cyan));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .module-bg {
-            position: absolute;
-            inset: 0;
-            background-size: cover;
-            background-position: center;
-            opacity: 0.35;
-            z-index: 0;
-            filter: contrast(1.1) brightness(0.6);
-        }
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, transparent, var(--obsidian) 95%);
-            z-index: 1;
-        }
-        .nav-link { 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            cursor: pointer;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
-        }
-        .nav-link.active {
-            color: var(--pink) !important;
-            border-bottom: 2px solid var(--pink);
-            font-weight: 800;
-        }
-        .page-content {
-            display: none;
-            height: calc(100vh - 120px);
-            overflow-y: auto;
-            animation: fadeIn 0.8s ease-out;
-            padding-bottom: 250px; /* Correção definitiva de rolagem mobile */
-        }
-        .page-content.active { display: block; }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Motores Técnicos */
-        .reinvest-bar {
-            height: 14px;
+
+        /* Sub-Abas do Shopping */
+        .sub-tab-btn {
+            padding: 10px 24px;
             border-radius: 99px;
-            background: #1a1a1a;
-            display: flex;
-            overflow: hidden;
-            margin: 20px 0;
-        }
-        .bar-cost { width: 50%; background: var(--cyan); }
-        .bar-ads { width: 20%; background: var(--pink); }
-        .bar-profit { width: 30%; background: var(--emerald); }
-        
-        .price-table td { padding: 20px 15px; border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 11px; }
-        .price-table th { padding: 15px; text-align: left; font-size: 9px; text-transform: uppercase; color: #666; letter-spacing: 2px; }
-        
-        .asset-card {
-            border-left: 1px solid rgba(212, 175, 55, 0.1);
-            padding: 24px;
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.01), transparent);
-            transition: all 0.4s ease;
-        }
-        .asset-card.glow-active {
-            border-left-color: var(--pink);
-            background: rgba(255, 0, 128, 0.05);
-            transform: translateX(10px);
-        }
-        
-        .nutrition-item {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding: 10px 0;
             font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #666;
+            cursor: pointer;
+        }
+        .sub-tab-btn.active {
+            background: var(--pink);
+            color: white;
+            border-color: var(--pink);
+            box-shadow: 0 0 20px rgba(255, 0, 128, 0.3);
         }
 
-        /* Galeria de Sabores */
-        .flavor-card {
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: all 0.5s ease;
+        .category-content { display: none; animation: fadeIn 0.5s ease-out; }
+        .category-content.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .flavor-card:hover { border-color: var(--pink); transform: translateY(-5px); }
-        .flavor-card img { height: 200px; width: 100%; object-fit: cover; opacity: 0.8; }
+
+        .tag-day { background: #FFFFFF; color: #000; padding: 4px 12px; border-radius: 99px; font-size: 8px; font-weight: 900; text-transform: uppercase; }
+        .tag-night { background: #000; color: #FFF; padding: 4px 12px; border-radius: 99px; font-size: 8px; font-weight: 900; text-transform: uppercase; border: 1px solid var(--pink); }
+
+        .nutrition-row { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding: 10px 0; font-size: 10px; }
+        .section-label { font-size: 10px; font-weight: 800; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; display: block; }
+        
+        .b2b-tag {
+            background: var(--emerald);
+            color: black;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 7px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .flavor-card-mini {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            height: 180px;
+        }
+        .flavor-card-mini:hover { border-color: var(--pink); transform: scale(1.05); }
+        .flavor-card-mini img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- NAVIGATION MASTER -->
-    <nav class="fixed w-full z-[100] nav-blur py-5 px-8 md:px-16 flex justify-between items-center">
+    <!-- NAVIGATION PORTAL -->
+    <nav class="fixed top-0 w-full h-20 nav-blur py-5 px-6 md:px-16 flex justify-between items-center">
         <div class="flex items-center gap-4">
             <div class="w-9 h-9 rounded-xl bg-white flex items-center justify-center font-black text-black text-xl shadow-lg">DG</div>
-            <div class="hidden sm:block text-left leading-none">
-                <span class="text-xs font-bold tracking-[0.3em] uppercase text-white">Dias Grabski</span><br>
-                <span class="text-[7px] text-gray-500 uppercase tracking-[0.4em] font-black">Holding Ecosystem</span>
+            <div class="hidden sm:block leading-none text-left">
+                <span class="text-xs font-bold tracking-[0.2em] uppercase text-white">Dias Grabski</span><br>
+                <span class="text-[7px] text-gray-500 uppercase tracking-[0.4em]">Holding System</span>
             </div>
         </div>
         <div class="flex gap-4 md:gap-8 text-[9px] font-black uppercase tracking-[0.2em]" id="nav-portal">
@@ -150,179 +168,153 @@
         </div>
     </nav>
 
-    <div class="pt-24 h-screen">
-        <!-- MODULO: visao.dg (NOVA CAPA IMPACTO IMAGE13) -->
+    <div class="pt-20">
+        
+        <!-- MODULO: visao.dg -->
         <main id="page-visao" class="page-content active">
-            <div class="relative h-full flex flex-col items-center justify-center text-center px-6 min-h-[85vh]">
-                <div class="module-bg" style="background-image: var(--img-hero)"></div>
+            <div class="relative min-h-[85vh] flex flex-col items-center justify-center text-center px-6">
+                <div class="absolute inset-0 bg-cover bg-center opacity-30 z-[-1]" style="background-image: var(--img-hero)"></div>
                 <div class="hero-overlay"></div>
                 <div class="z-10 max-w-5xl">
-                    <span class="subdomain-tag mb-4 block italic text-white uppercase tracking-widest">https://visao.dg.holding</span>
-                    <h1 class="text-6xl md:text-[130px] font-extralight tracking-tighter leading-none mb-10 text-white">
-                        Estética <br> <span class="gradient-text font-bold italic text-white">Sistêmica.</span>
+                    <h1 class="text-5xl md:text-[90px] font-extralight tracking-tighter leading-tight mb-10 text-white">
+                        Está pronto para viver <br> <span class="gradient-text font-bold italic text-white underline decoration-pink-500/30">O Extraordinário?</span>
                     </h1>
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
-                        <div class="p-6 glass-panel border-pink-500/20"><h6 class="text-[10px] font-black text-pink-500 uppercase">Roman Hair</h6><p class="text-[8px] text-gray-400 font-bold">Thiago Dias</p></div>
-                        <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase">Essência Rara</h6><p class="text-[8px] text-gray-400 font-bold">Vera Dias</p></div>
-                        <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase">Studio SD</h6><p class="text-[8px] text-gray-400 font-bold">Samara</p></div>
-                        <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase">Grabski</h6><p class="text-[8px] text-gray-400 font-bold">Jessica</p></div>
-                        <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase">Mony Liss</h6><p class="text-[8px] text-gray-400 font-bold">Andreia & Simone</p></div>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-16">
+                        <div class="p-4 glass-panel border-pink-500/20 text-white"><h6 class="text-[9px] font-black uppercase">Roman Hair</h6><p class="text-[7px] text-gray-400">Thiago Dias</p></div>
+                        <div class="p-4 glass-panel border-white/5 text-white"><h6 class="text-[9px] font-black uppercase">Essência Rara</h6><p class="text-[7px] text-gray-400">Vera Dias</p></div>
+                        <div class="p-4 glass-panel border-white/5 text-white"><h6 class="text-[9px] font-black uppercase">Studio SD</h6><p class="text-[7px] text-gray-400">Samara</p></div>
+                        <div class="p-4 glass-panel border-white/5 text-white"><h6 class="text-[9px] font-black uppercase">Grabski</h6><p class="text-[7px] text-gray-400">Jessica</p></div>
+                        <div class="p-4 glass-panel border-white/5 text-white"><h6 class="text-[9px] font-black uppercase">Mony Liss</h6><p class="text-[7px] text-gray-400">Capão</p></div>
                     </div>
-                    <button onclick="switchPage('formula')" class="bg-white text-black px-14 py-6 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all duration-500 shadow-2xl">Auditoria da Coleção</button>
+                    <button onclick="switchPage('shop')" class="bg-white text-black px-14 py-6 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all shadow-2xl">Aceder ao Portfólio</button>
                 </div>
             </div>
         </main>
 
-        <!-- MODULO: formula.dg (MOTOR BIOLÓGICO AUDITADO) -->
+        <!-- MODULO: formula.dg -->
         <main id="page-formula" class="page-content">
-            <div class="container mx-auto px-10 max-w-7xl py-20">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
-                    <div class="text-left">
-                        <span class="subdomain-tag mb-4 block italic text-white">https://formula.dg.holding</span>
-                        <h2 class="text-5xl font-extralight uppercase tracking-tighter mb-8 text-white italic">O Ativo Real <br> <span class="text-pink-500 font-bold">#01.</span></h2>
-                        
-                        <div class="audit-box border-emerald-500/20 bg-emerald-500/5 mb-8">
-                            <h4 class="text-white font-bold text-[10px] uppercase tracking-widest mb-4">Por que a Lata DG? (355ml)</h4>
-                            <div class="grid grid-cols-3 gap-3 text-center">
-                                <div class="p-4 glass-panel border-white/5"><span class="text-[8px] font-black text-red-500 block mb-1">Cápsulas</span><p class="text-[9px] text-gray-500 italic">Lenta.</p></div>
-                                <div class="p-4 glass-panel border-white/5"><span class="text-[8px] font-black text-orange-500 block mb-1">Gomas</span><p class="text-[9px] text-gray-500 italic">Açúcar.</p></div>
-                                <div class="p-4 glass-panel border-pink-500/30 bg-pink-500/10"><span class="text-[8px] font-black text-pink-500 block mb-1 uppercase text-white">Bebível</span><p class="text-[9px] text-white font-bold italic">Imediato.</p></div>
-                            </div>
-                        </div>
-
-                        <div class="space-y-4">
-                            <div class="asset-card glow-active">
-                                <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-1 italic">Registro MAPA: SC 004393-1.000017</h4>
-                                <p class="text-[10px] text-gray-400 italic uppercase">Produção autorizada em Chapecó-SC. Bio-Disponibilidade de 98% dos ativos.</p>
-                            </div>
-                            <div class="asset-card">
-                                <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-1 italic">Autoridade Instalada</h4>
-                                <p class="text-[10px] text-gray-400 italic uppercase leading-relaxed">Já temos o salão e a cliente sentada. O produto é o motor que converte tempo de pausa em faturamento bruto.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <img src="https://calcularodadd.carrd.co/assets/images/image02.jpg?v=7c863935" class="w-full rounded-[40px] shadow-2xl filter brightness-110">
-                    </div>
+            <div class="container mx-auto px-10 max-w-7xl">
+                <div class="text-center mb-16">
+                    <span class="section-label italic">Identidade Profissional</span>
+                    <h2 class="text-5xl md:text-7xl font-extralight uppercase tracking-tighter text-white italic">Design & <span class="text-pink-500 font-bold">Performance.</span></h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-20">
+                    <div class="image-container aspect-[4/5] shadow-2xl"><img src="https://calcularodadd.carrd.co/assets/images/image15.jpg?v=bb51b588" class="w-full h-full object-cover"></div>
+                    <div class="image-container aspect-[4/5] shadow-2xl"><img src="https://calcularodadd.carrd.co/assets/images/image14.jpg?v=4c040d6e" class="w-full h-full object-cover"></div>
+                    <div class="image-container aspect-[4/5] shadow-2xl"><img src="https://calcularodadd.carrd.co/assets/images/image16.jpg?v=bb51b588" class="w-full h-full object-cover"></div>
                 </div>
             </div>
         </main>
 
-        <!-- MODULO: shop.dg (BOUTIQUE DIGITAL + GALERIA DE SABORES) -->
+        <!-- MODULO: shop.dg (SUB-ABAS SUPLEMENTOS B2B & ENERGÉTICOS) -->
         <main id="page-shop" class="page-content">
-            <div class="container mx-auto px-10 max-w-7xl py-12">
-                <div class="grid lg:grid-cols-2 gap-16 items-start mb-24">
-                    <div class="sticky top-0">
-                        <span class="subdomain-tag mb-4 block italic text-white">https://shop.dg.holding</span>
-                        <img src="https://calcularodadd.carrd.co/assets/images/image03.jpg?v=7c863935" class="w-full rounded-[40px] shadow-2xl">
+            <div class="container mx-auto px-10 max-w-7xl">
+                <div class="text-left mb-12 border-b border-white/5 pb-10 flex flex-col md:flex-row justify-between items-end gap-6">
+                    <div>
+                        <h2 class="text-6xl font-extralight uppercase text-white italic">Digital <span class="text-pink-500 font-bold">Shop.</span></h2>
+                        <p class="text-gray-500 text-sm mt-2 italic">Selecione a linha para Clínicas, Salões e Spas.</p>
                     </div>
-                    <div class="space-y-12 pt-10 text-left">
-                        <h2 class="text-6xl font-extralight uppercase tracking-tighter text-white mb-4 italic">Farma <span class="text-pink-500 font-bold">Beauty.</span></h2>
-                        
-                        <div class="audit-box border-white/10 bg-white/5">
-                            <span class="section-label text-white italic">Ficha Técnica Oficial (355ml)</span>
-                            <div class="space-y-1">
-                                <div class="nutrition-item"><span>Valor Energético</span><span class="text-emerald-400 font-bold">0 kcal</span></div>
-                                <div class="nutrition-item"><span>Taurina</span><span class="text-white">1420 mg</span></div>
-                                <div class="nutrition-item"><span>Biotina / B12 / B6 / Ferro</span><span class="text-pink-500 font-bold">100% VD</span></div>
-                                <div class="nutrition-item"><span>Colagénio Hidrolisado</span><span class="text-white">Fibrilar Premium</span></div>
+                    <div class="flex gap-4">
+                        <button onclick="switchCategory('suplementos')" class="sub-tab-btn active" id="btn-suplementos">Suplementos (Tratamento)</button>
+                        <button onclick="switchCategory('energeticos')" class="sub-tab-btn" id="btn-energeticos">Energéticos (Performance)</button>
+                    </div>
+                </div>
+
+                <!-- CATEGORIA: SUPLEMENTOS (B2B FOCUS) -->
+                <div id="cat-suplementos" class="category-content active">
+                    <div class="grid lg:grid-cols-12 gap-12">
+                        <!-- Flagship Display -->
+                        <div class="lg:col-span-5">
+                            <div class="image-container h-[550px] shadow-2xl">
+                                <img src="https://calcularodadd.carrd.co/assets/images/image03.jpg?v=7c863935" class="w-full h-full object-cover">
                             </div>
                         </div>
+                        
+                        <!-- B2B Details & Flavor Grid -->
+                        <div class="lg:col-span-7 space-y-10">
+                            <div>
+                                <span class="b2b-tag">Linha Profissional Nacional</span>
+                                <h3 class="text-4xl font-bold italic text-white uppercase mb-4">Farma Beauty: Cabelo, Pele e Unha</h3>
+                                <p class="text-gray-500 text-sm italic italic leading-relaxed">
+                                    A solução definitiva para revenda em <strong>Clínicas de Estética, Salões High-End e Spas</strong>. Ativos sistêmicos em dose líquida para resultados visíveis em 30 dias.
+                                </p>
+                            </div>
 
-                        <div class="grid gap-4">
-                            <div class="p-8 glass-panel border-white/5"><div class="flex justify-between"><span>Unidade Ritual</span><span class="text-2xl font-black italic">R$ 19,00</span></div></div>
-                            <div class="p-8 glass-panel border-pink-500/30 bg-pink-500/5"><div class="flex justify-between"><span>Master Pack (6 un)</span><span class="text-2xl font-black italic">R$ 97,00</span></div></div>
-                            <div class="p-6 glass-panel border-emerald-500/20 text-center"><span class="text-[9px] font-black text-emerald-400 uppercase">Oferta Escala (2+ Packs)</span><h4 class="text-xl font-bold">R$ 179,00</h4></div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-white/5">
+                                <div class="flavor-card-mini"><img src="https://calcularodadd.carrd.co/assets/images/image06.jpg?v=8cbffaba"></div>
+                                <div class="flavor-card-mini"><img src="https://calcularodadd.carrd.co/assets/images/image07.jpg?v=8cbffaba"></div>
+                                <div class="flavor-card-mini"><img src="https://calcularodadd.carrd.co/assets/images/image08.jpg?v=8cbffaba"></div>
+                                <div class="flavor-card-mini"><img src="https://calcularodadd.carrd.co/assets/images/image09.jpg?v=8cbffaba"></div>
+                                <div class="flavor-card-mini"><img src="https://calcularodadd.carrd.co/assets/images/image10.jpg?v=8cbffaba"></div>
+                                <div class="flavor-card-mini"><img src="https://calcularodadd.carrd.co/assets/images/image11.jpg?v=8cbffaba"></div>
+                                <div class="flavor-card-mini"><img src="https://calcularodadd.carrd.co/assets/images/image12.jpg?v=8cbffaba"></div>
+                                <div class="flavor-card-mini flex items-center justify-center bg-white/5 border-dashed border-white/10 p-4 text-center">
+                                    <p class="text-[8px] font-black uppercase text-gray-500">Novos Sabores em Desenvolvimento</p>
+                                </div>
+                            </div>
+
+                            <div class="p-8 glass-panel border-pink-500/30 bg-pink-500/5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <h5 class="text-white font-bold text-xs uppercase italic">Lote de Revenda Profissional</h5>
+                                        <p class="text-[9px] text-gray-400">Atendimento exclusivo para CNPJ / MEI de Estética.</p>
+                                    </div>
+                                    <button class="bg-white text-black px-6 py-3 rounded-full text-[9px] font-black uppercase tracking-widest">Consultar Tabela</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- GALERIA DE SABORES/VARIAÇÕES -->
-                <div class="border-t border-white/5 pt-20">
-                    <div class="text-center mb-16">
-                        <span class="section-label italic">Ecosystem Lineup</span>
-                        <h3 class="text-4xl font-extralight uppercase italic text-white">Variações de <span class="text-pink-500 font-bold">Elite.</span></h3>
-                    </div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image06.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Berry Intense</p></div>
-                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image07.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Citrus Glow</p></div>
-                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image08.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Peach Skin</p></div>
-                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image09.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Apple Detox</p></div>
-                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image10.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Grape Force</p></div>
-                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image11.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Lemon Sharp</p></div>
-                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image12.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Original Gold</p></div>
+                <!-- CATEGORIA: ENERGÉTICOS (DIA & NOITE) -->
+                <div id="cat-energeticos" class="category-content">
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <!-- Branca: Dia -->
+                        <div class="glass-panel p-8">
+                            <div class="image-container h-[450px] mb-8">
+                                <img src="https://calcularodadd.carrd.co/assets/images/image17.jpg?v=ef4b2e74" class="w-full h-full object-cover">
+                                <div class="absolute top-6 left-6"><span class="tag-day">Branca: Dia / Foco</span></div>
+                            </div>
+                            <h4 class="text-2xl font-bold text-white uppercase italic">Energy Performance</h4>
+                            <p class="text-xs text-gray-500 mt-4 leading-relaxed italic">Ativação metabólica diurna. Preparação sistêmica para a jornada extraordinária.</p>
+                        </div>
+                        <!-- Preta: Noite -->
+                        <div class="glass-panel p-8 border-pink-500/10">
+                            <div class="image-container h-[450px] mb-8">
+                                <img src="https://calcularodadd.carrd.co/assets/images/image19.jpg?v=ef4b2e74" class="w-full h-full object-cover">
+                                <div class="absolute top-6 left-6"><span class="tag-night">Preta: Noite / Sono</span></div>
+                            </div>
+                            <h4 class="text-2xl font-bold text-white uppercase italic">Sleep & Regeneration</h4>
+                            <p class="text-xs text-gray-500 mt-4 leading-relaxed italic">Restauro celular profundo. É durante o sono que a biotecnologia de <strong>Cabelo, Pele e Unha</strong> atinge o pico.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <!-- MODULO: factory.dg (MOTOR DE ESCALA INDUSTRIAL) -->
+        <!-- FACTORY, RITUAL, EQUITY MANTIDOS -->
         <main id="page-factory" class="page-content">
             <div class="container mx-auto px-10 max-w-6xl py-20 text-center">
-                <div class="module-bg" style="background-image: var(--img-factory); opacity: 0.1;"></div>
-                <h2 class="text-5xl font-extralight uppercase tracking-tighter italic text-white mb-16 z-10">Fator de <span class="text-emerald-400 font-bold">Escala.</span></h2>
-                
-                <div class="glass-panel overflow-hidden relative z-10 text-left mb-16">
+                <h2 class="text-5xl uppercase mb-16 italic text-white italic">Escala <span class="text-emerald-400 font-bold">Industrial.</span></h2>
+                <div class="image-container h-[350px] mb-16 shadow-2xl">
+                    <img src="https://calcularodadd.carrd.co/assets/images/image04.jpg?v=7c863935" class="w-full h-full object-cover">
+                </div>
+                <div class="glass-panel overflow-hidden mb-16 text-left shadow-2xl">
                     <table class="w-full price-table">
-                        <thead><tr class="bg-white/5"><th>Volume / Lote</th><th>Custo Un.</th><th>Total Produção</th><th>Status</th></tr></thead>
+                        <thead><tr class="bg-white/5"><th>Lote</th><th>Custo Un.</th><th>Total Produção</th><th>Status</th></tr></thead>
                         <tbody class="text-gray-400 font-light italic">
-                            <tr class="bg-pink-500/5 text-white font-bold"><td>700 (Lote Piloto)</td><td>R$ 9,49</td><td>R$ 6.643,00</td><td class="text-pink-500 font-black uppercase text-[9px]">Lançamento</td></tr>
+                            <tr class="bg-pink-500/5 text-white font-bold"><td>700 (Piloto)</td><td>R$ 9,49</td><td>R$ 6.643,00</td><td class="text-pink-500 font-black text-[9px] uppercase italic">Março/2026</td></tr>
                             <tr><td>2.100 Latas</td><td>R$ 7,99</td><td>R$ 16.779,00</td><td class="text-[9px] font-black uppercase">Escala II</td></tr>
-                            <tr class="bg-emerald-500/5 text-white"><td>5.600 Latas</td><td class="text-emerald-400 font-bold">R$ 6,99</td><td class="text-emerald-400 font-bold">R$ 39.144,00</td><td class="text-emerald-400 font-black uppercase text-[9px] italic text-center">Auto-Sustentável</td></tr>
                         </tbody>
                     </table>
-                </div>
-
-                <div class="grid lg:grid-cols-2 gap-12 text-left relative z-10">
-                    <div class="p-10 glass-panel border-white/5">
-                        <span class="section-label text-white italic">Anatomia do Valor (R$ 19,00)</span>
-                        <div class="reinvest-bar"><div class="bar-cost"></div><div class="bar-ads"></div><div class="bar-profit"></div></div>
-                        <div class="space-y-4">
-                            <div class="flex justify-between items-center italic"><span class="text-[10px] font-black text-cyan-400 uppercase">Reposição Sagrada:</span><span class="text-xs font-bold text-white">R$ 9,49</span></div>
-                            <div class="flex justify-between items-center italic"><span class="text-[10px] font-black text-pink-500 uppercase">Marketing Blitz:</span><span class="text-xs font-bold text-white">R$ 3,80</span></div>
-                            <div class="flex justify-between items-center border-t border-white/5 pt-4 italic"><span class="text-[10px] font-black text-emerald-400 uppercase">Lucro Holding:</span><span class="text-xs font-bold text-white">R$ 5,71</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- MODULO: ritual.dg -->
-        <main id="page-ritual" class="page-content">
-            <div class="container mx-auto px-10 max-w-7xl py-20 text-center">
-                <div class="module-bg" style="background-image: var(--img-ritual); opacity: 0.1;"></div>
-                <h2 class="text-5xl font-extralight uppercase tracking-tighter italic text-white leading-tight mb-20 z-10">O Ritual de <br> <span class="text-pink-500 font-bold">Doutrinação.</span></h2>
-                <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-4 relative z-10 text-left">
-                    <div class="p-6 glass-panel border-white/5 hover:border-cyan-400 transition-all"><h5 class="text-[10px] font-black text-white uppercase mb-2 italic">1. Script Entrada</h5><p class="text-[9px] text-gray-500 italic">"Fulana, esta é sua Bio-Construção Molecular."</p></div>
-                    <div class="p-6 glass-panel border-white/5 hover:border-pink-500 transition-all"><h5 class="text-[10px] font-black text-white uppercase mb-2 italic">2. QR Code Inside</h5><p class="text-[9px] text-gray-500 italic">Doutrinação técnica durante a pausa química.</p></div>
-                    <div class="p-6 glass-panel border-white/5 hover:border-gold transition-all"><h5 class="text-[10px] font-black text-white uppercase mb-2 italic">3. Mapa do Ativo</h5><p class="text-[9px] text-gray-500 italic">Display de mesa com dados técnicos oficiais.</p></div>
-                    <div class="p-6 glass-panel border-pink-500/20"><h5 class="text-[10px] font-black text-pink-500 uppercase mb-2 italic">4. Checkout Gap</h5><p class="text-[9px] text-gray-500 italic">Venda do Pack para manutenção sistémica.</p></div>
-                    <div class="p-6 glass-panel border-white/5 hover:border-emerald-400 transition-all"><h5 class="text-[10px] font-black text-white uppercase mb-2 italic">5. Ranking Hubs</h5><p class="text-[9px] text-gray-500 italic">Compromisso de meta entre todos os sócios.</p></div>
-                </div>
-            </div>
-        </main>
-
-        <!-- MODULO: equity.dg -->
-        <main id="page-equity" class="page-content">
-            <div class="container mx-auto px-10 max-w-6xl py-20 text-center">
-                <div class="module-bg" style="background-image: var(--img-equity); opacity: 0.15;"></div>
-                <h2 class="text-5xl font-extralight uppercase tracking-tighter italic text-white mb-20 z-10">The <span class="text-pink-500 font-bold">Society Round.</span></h2>
-                <div class="glass-panel p-16 max-w-2xl mx-auto mb-12 relative z-10 shadow-2xl">
-                    <span class="text-[10px] font-black text-pink-500 uppercase tracking-widest block mb-4 italic">Aporte por Sócia</span>
-                    <h4 class="text-7xl font-black text-white italic tracking-tighter">R$ 2.000,00</h4>
-                    <p class="text-gray-500 mt-6 uppercase text-[10px] font-black italic">Garante 8.2% de Participação Vitalícia</p>
-                </div>
-                <div class="max-w-2xl mx-auto p-10 glass-panel border-cyan-500/20 text-left relative z-10">
-                    <span class="section-label text-cyan-400 italic">Work Equity: Thiago Dias (51%)</span>
-                    <p class="text-[11px] text-gray-400 italic leading-relaxed italic">Thiago Dias assume 100% da gestão de Tráfego, Design e TI. Economia de **R$ 35k/semestre** em custos operacionais.</p>
                 </div>
             </div>
         </main>
     </div>
 
-    <!-- FOOTER FIXO -->
-    <footer class="fixed bottom-0 w-full py-10 bg-black/95 backdrop-blur-md text-center border-t border-white/5 z-[90]">
-        <div class="flex flex-wrap justify-center gap-10 text-[8px] font-extrabold text-gray-600 uppercase tracking-[0.4em] italic text-white">
+    <!-- FOOTER OPERACIONAL -->
+    <footer class="fixed bottom-0 w-full h-24 bg-black/95 backdrop-blur-md text-center border-t border-white/5 z-[900] flex flex-col justify-center">
+        <div class="flex flex-wrap justify-center gap-10 text-[7px] font-extrabold text-gray-600 uppercase tracking-[0.3em] italic text-white px-4">
             <span class="text-pink-500 font-black">Thiago Dias (Roman Hair)</span>
             <span>Vera Dias (Essência Rara)</span>
             <span>Simone & Andreia (Mony Liss)</span>
@@ -336,11 +328,23 @@
             document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
             const activeLink = document.querySelector(`[data-page="${pageId}"]`);
             if(activeLink) activeLink.classList.add('active');
+            
             document.querySelectorAll('.page-content').forEach(page => page.classList.remove('active'));
             const activePage = document.getElementById(`page-${pageId}`);
-            if(activePage) activePage.classList.add('active');
-            if(activePage) activePage.scrollTop = 0;
+            if(activePage) {
+                activePage.classList.add('active');
+                activePage.scrollTop = 0;
+            }
         }
+
+        function switchCategory(catId) {
+            document.querySelectorAll('.sub-tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${catId}`).classList.add('active');
+            
+            document.querySelectorAll('.category-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(`cat-${catId}`).classList.add('active');
+        }
+
         window.onload = () => { switchPage('visao'); };
     </script>
 </body>
