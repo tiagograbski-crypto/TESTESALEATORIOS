@@ -1,1 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DG Holding | Real Data Ecosystem 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #FF0080;
+            --cyan: #00D1FF;
+            --emerald: #00FF8A;
+            --obsidian: #010101;
+            --gold: #D4AF37;
+            /* Brand Assets - Coleção 2026 */
+            --img-hero: url('https://calcularodadd.carrd.co/assets/images/image13.jpg?v=8cbffaba');
+            --img-formula: url('https://calcularodadd.carrd.co/assets/images/image02.jpg?v=7c863935');
+            --img-factory: url('https://calcularodadd.carrd.co/assets/images/image04.jpg?v=7c863935');
+            --img-ritual: url('https://calcularodadd.carrd.co/assets/images/image05.jpg?v=7c863935');
+            --img-equity: url('https://calcularodadd.carrd.co/assets/images/image01.jpg?v=460b0ab4');
+        }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--obsidian);
+            color: #FFFFFF;
+            overflow: hidden; 
+        }
+        .glass-panel { 
+            background: rgba(255, 255, 255, 0.02); 
+            backdrop-filter: blur(25px); 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 32px;
+        }
+        .nav-blur { 
+            background: rgba(1, 1, 1, 0.98); 
+            backdrop-filter: blur(20px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .subdomain-tag { font-family: monospace; color: var(--cyan); font-size: 11px; letter-spacing: 1px; }
+        .gradient-text {
+            background: linear-gradient(135deg, var(--gold), #FFFFFF, var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .module-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.35;
+            z-index: 0;
+            filter: contrast(1.1) brightness(0.6);
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent, var(--obsidian) 95%);
+            z-index: 1;
+        }
+        .nav-link { 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            cursor: pointer;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link.active {
+            color: var(--pink) !important;
+            border-bottom: 2px solid var(--pink);
+            font-weight: 800;
+        }
+        .page-content {
+            display: none;
+            height: calc(100vh - 120px);
+            overflow-y: auto;
+            animation: fadeIn 0.8s ease-out;
+            padding-bottom: 250px; /* Correção definitiva de rolagem mobile */
+        }
+        .page-content.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Motores Técnicos */
+        .reinvest-bar {
+            height: 14px;
+            border-radius: 99px;
+            background: #1a1a1a;
+            display: flex;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .bar-cost { width: 50%; background: var(--cyan); }
+        .bar-ads { width: 20%; background: var(--pink); }
+        .bar-profit { width: 30%; background: var(--emerald); }
+        
+        .price-table td { padding: 20px 15px; border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 11px; }
+        .price-table th { padding: 15px; text-align: left; font-size: 9px; text-transform: uppercase; color: #666; letter-spacing: 2px; }
+        
+        .asset-card {
+            border-left: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 24px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.01), transparent);
+            transition: all 0.4s ease;
+        }
+        .asset-card.glow-active {
+            border-left-color: var(--pink);
+            background: rgba(255, 0, 128, 0.05);
+            transform: translateX(10px);
+        }
+        
+        .nutrition-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 10px 0;
+            font-size: 10px;
+        }
 
+        /* Galeria de Sabores */
+        .flavor-card {
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.5s ease;
+        }
+        .flavor-card:hover { border-color: var(--pink); transform: translateY(-5px); }
+        .flavor-card img { height: 200px; width: 100%; object-fit: cover; opacity: 0.8; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- NAVIGATION MASTER -->
+    <nav class="fixed w-full z-[100] nav-blur py-5 px-8 md:px-16 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <div class="w-9 h-9 rounded-xl bg-white flex items-center justify-center font-black text-black text-xl shadow-lg">DG</div>
+            <div class="hidden sm:block text-left leading-none">
+                <span class="text-xs font-bold tracking-[0.3em] uppercase text-white">Dias Grabski</span><br>
+                <span class="text-[7px] text-gray-500 uppercase tracking-[0.4em] font-black">Holding Ecosystem</span>
+            </div>
+        </div>
+        <div class="flex gap-4 md:gap-8 text-[9px] font-black uppercase tracking-[0.2em]" id="nav-portal">
+            <a onclick="switchPage('visao')" class="nav-link text-gray-500 active" data-page="visao">visao.dg</a>
+            <a onclick="switchPage('formula')" class="nav-link text-gray-500" data-page="formula">formula.dg</a>
+            <a onclick="switchPage('shop')" class="nav-link text-gray-500" data-page="shop">shop.dg</a>
+            <a onclick="switchPage('factory')" class="nav-link text-gray-500" data-page="factory">factory.dg</a>
+            <a onclick="switchPage('ritual')" class="nav-link text-gray-500" data-page="ritual">ritual.dg</a>
+            <a onclick="switchPage('equity')" class="nav-link text-gray-500" data-page="equity">equity.dg</a>
+        </div>
+    </nav>
+
+    <div class="pt-24 h-screen">
+        <!-- MODULO: visao.dg (NOVA CAPA IMPACTO IMAGE13) -->
+        <main id="page-visao" class="page-content active">
+            <div class="relative h-full flex flex-col items-center justify-center text-center px-6 min-h-[85vh]">
+                <div class="module-bg" style="background-image: var(--img-hero)"></div>
+                <div class="hero-overlay"></div>
+                <div class="z-10 max-w-5xl">
+                    <span class="subdomain-tag mb-4 block italic text-white uppercase tracking-widest">https://visao.dg.holding</span>
+                    <h1 class="text-6xl md:text-[130px] font-extralight tracking-tighter leading-none mb-10 text-white">
+                        Estética <br> <span class="gradient-text font-bold italic text-white">Sistêmica.</span>
+                    </h1>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
+                        <div class="p-6 glass-panel border-pink-500/20"><h6 class="text-[10px] font-black text-pink-500 uppercase">Roman Hair</h6><p class="text-[8px] text-gray-400 font-bold">Thiago Dias</p></div>
+                        <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase">Essência Rara</h6><p class="text-[8px] text-gray-400 font-bold">Vera Dias</p></div>
+                        <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase">Studio SD</h6><p class="text-[8px] text-gray-400 font-bold">Samara</p></div>
+                        <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase">Grabski</h6><p class="text-[8px] text-gray-400 font-bold">Jessica</p></div>
+                        <div class="p-6 glass-panel border-white/5"><h6 class="text-[10px] font-black text-white uppercase">Mony Liss</h6><p class="text-[8px] text-gray-400 font-bold">Andreia & Simone</p></div>
+                    </div>
+                    <button onclick="switchPage('formula')" class="bg-white text-black px-14 py-6 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all duration-500 shadow-2xl">Auditoria da Coleção</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- MODULO: formula.dg (MOTOR BIOLÓGICO AUDITADO) -->
+        <main id="page-formula" class="page-content">
+            <div class="container mx-auto px-10 max-w-7xl py-20">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="text-left">
+                        <span class="subdomain-tag mb-4 block italic text-white">https://formula.dg.holding</span>
+                        <h2 class="text-5xl font-extralight uppercase tracking-tighter mb-8 text-white italic">O Ativo Real <br> <span class="text-pink-500 font-bold">#01.</span></h2>
+                        
+                        <div class="audit-box border-emerald-500/20 bg-emerald-500/5 mb-8">
+                            <h4 class="text-white font-bold text-[10px] uppercase tracking-widest mb-4">Por que a Lata DG? (355ml)</h4>
+                            <div class="grid grid-cols-3 gap-3 text-center">
+                                <div class="p-4 glass-panel border-white/5"><span class="text-[8px] font-black text-red-500 block mb-1">Cápsulas</span><p class="text-[9px] text-gray-500 italic">Lenta.</p></div>
+                                <div class="p-4 glass-panel border-white/5"><span class="text-[8px] font-black text-orange-500 block mb-1">Gomas</span><p class="text-[9px] text-gray-500 italic">Açúcar.</p></div>
+                                <div class="p-4 glass-panel border-pink-500/30 bg-pink-500/10"><span class="text-[8px] font-black text-pink-500 block mb-1 uppercase text-white">Bebível</span><p class="text-[9px] text-white font-bold italic">Imediato.</p></div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="asset-card glow-active">
+                                <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-1 italic">Registro MAPA: SC 004393-1.000017</h4>
+                                <p class="text-[10px] text-gray-400 italic uppercase">Produção autorizada em Chapecó-SC. Bio-Disponibilidade de 98% dos ativos.</p>
+                            </div>
+                            <div class="asset-card">
+                                <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-1 italic">Autoridade Instalada</h4>
+                                <p class="text-[10px] text-gray-400 italic uppercase leading-relaxed">Já temos o salão e a cliente sentada. O produto é o motor que converte tempo de pausa em faturamento bruto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://calcularodadd.carrd.co/assets/images/image02.jpg?v=7c863935" class="w-full rounded-[40px] shadow-2xl filter brightness-110">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- MODULO: shop.dg (BOUTIQUE DIGITAL + GALERIA DE SABORES) -->
+        <main id="page-shop" class="page-content">
+            <div class="container mx-auto px-10 max-w-7xl py-12">
+                <div class="grid lg:grid-cols-2 gap-16 items-start mb-24">
+                    <div class="sticky top-0">
+                        <span class="subdomain-tag mb-4 block italic text-white">https://shop.dg.holding</span>
+                        <img src="https://calcularodadd.carrd.co/assets/images/image03.jpg?v=7c863935" class="w-full rounded-[40px] shadow-2xl">
+                    </div>
+                    <div class="space-y-12 pt-10 text-left">
+                        <h2 class="text-6xl font-extralight uppercase tracking-tighter text-white mb-4 italic">Farma <span class="text-pink-500 font-bold">Beauty.</span></h2>
+                        
+                        <div class="audit-box border-white/10 bg-white/5">
+                            <span class="section-label text-white italic">Ficha Técnica Oficial (355ml)</span>
+                            <div class="space-y-1">
+                                <div class="nutrition-item"><span>Valor Energético</span><span class="text-emerald-400 font-bold">0 kcal</span></div>
+                                <div class="nutrition-item"><span>Taurina</span><span class="text-white">1420 mg</span></div>
+                                <div class="nutrition-item"><span>Biotina / B12 / B6 / Ferro</span><span class="text-pink-500 font-bold">100% VD</span></div>
+                                <div class="nutrition-item"><span>Colagénio Hidrolisado</span><span class="text-white">Fibrilar Premium</span></div>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-4">
+                            <div class="p-8 glass-panel border-white/5"><div class="flex justify-between"><span>Unidade Ritual</span><span class="text-2xl font-black italic">R$ 19,00</span></div></div>
+                            <div class="p-8 glass-panel border-pink-500/30 bg-pink-500/5"><div class="flex justify-between"><span>Master Pack (6 un)</span><span class="text-2xl font-black italic">R$ 97,00</span></div></div>
+                            <div class="p-6 glass-panel border-emerald-500/20 text-center"><span class="text-[9px] font-black text-emerald-400 uppercase">Oferta Escala (2+ Packs)</span><h4 class="text-xl font-bold">R$ 179,00</h4></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GALERIA DE SABORES/VARIAÇÕES -->
+                <div class="border-t border-white/5 pt-20">
+                    <div class="text-center mb-16">
+                        <span class="section-label italic">Ecosystem Lineup</span>
+                        <h3 class="text-4xl font-extralight uppercase italic text-white">Variações de <span class="text-pink-500 font-bold">Elite.</span></h3>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image06.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Berry Intense</p></div>
+                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image07.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Citrus Glow</p></div>
+                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image08.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Peach Skin</p></div>
+                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image09.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Apple Detox</p></div>
+                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image10.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Grape Force</p></div>
+                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image11.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Lemon Sharp</p></div>
+                        <div class="flavor-card glass-panel"><img src="https://calcularodadd.carrd.co/assets/images/image12.jpg?v=8cbffaba"><p class="p-3 text-[8px] font-bold text-center uppercase text-gray-500">Original Gold</p></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- MODULO: factory.dg (MOTOR DE ESCALA INDUSTRIAL) -->
+        <main id="page-factory" class="page-content">
+            <div class="container mx-auto px-10 max-w-6xl py-20 text-center">
+                <div class="module-bg" style="background-image: var(--img-factory); opacity: 0.1;"></div>
+                <h2 class="text-5xl font-extralight uppercase tracking-tighter italic text-white mb-16 z-10">Fator de <span class="text-emerald-400 font-bold">Escala.</span></h2>
+                
+                <div class="glass-panel overflow-hidden relative z-10 text-left mb-16">
+                    <table class="w-full price-table">
+                        <thead><tr class="bg-white/5"><th>Volume / Lote</th><th>Custo Un.</th><th>Total Produção</th><th>Status</th></tr></thead>
+                        <tbody class="text-gray-400 font-light italic">
+                            <tr class="bg-pink-500/5 text-white font-bold"><td>700 (Lote Piloto)</td><td>R$ 9,49</td><td>R$ 6.643,00</td><td class="text-pink-500 font-black uppercase text-[9px]">Lançamento</td></tr>
+                            <tr><td>2.100 Latas</td><td>R$ 7,99</td><td>R$ 16.779,00</td><td class="text-[9px] font-black uppercase">Escala II</td></tr>
+                            <tr class="bg-emerald-500/5 text-white"><td>5.600 Latas</td><td class="text-emerald-400 font-bold">R$ 6,99</td><td class="text-emerald-400 font-bold">R$ 39.144,00</td><td class="text-emerald-400 font-black uppercase text-[9px] italic text-center">Auto-Sustentável</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 text-left relative z-10">
+                    <div class="p-10 glass-panel border-white/5">
+                        <span class="section-label text-white italic">Anatomia do Valor (R$ 19,00)</span>
+                        <div class="reinvest-bar"><div class="bar-cost"></div><div class="bar-ads"></div><div class="bar-profit"></div></div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center italic"><span class="text-[10px] font-black text-cyan-400 uppercase">Reposição Sagrada:</span><span class="text-xs font-bold text-white">R$ 9,49</span></div>
+                            <div class="flex justify-between items-center italic"><span class="text-[10px] font-black text-pink-500 uppercase">Marketing Blitz:</span><span class="text-xs font-bold text-white">R$ 3,80</span></div>
+                            <div class="flex justify-between items-center border-t border-white/5 pt-4 italic"><span class="text-[10px] font-black text-emerald-400 uppercase">Lucro Holding:</span><span class="text-xs font-bold text-white">R$ 5,71</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- MODULO: ritual.dg -->
+        <main id="page-ritual" class="page-content">
+            <div class="container mx-auto px-10 max-w-7xl py-20 text-center">
+                <div class="module-bg" style="background-image: var(--img-ritual); opacity: 0.1;"></div>
+                <h2 class="text-5xl font-extralight uppercase tracking-tighter italic text-white leading-tight mb-20 z-10">O Ritual de <br> <span class="text-pink-500 font-bold">Doutrinação.</span></h2>
+                <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-4 relative z-10 text-left">
+                    <div class="p-6 glass-panel border-white/5 hover:border-cyan-400 transition-all"><h5 class="text-[10px] font-black text-white uppercase mb-2 italic">1. Script Entrada</h5><p class="text-[9px] text-gray-500 italic">"Fulana, esta é sua Bio-Construção Molecular."</p></div>
+                    <div class="p-6 glass-panel border-white/5 hover:border-pink-500 transition-all"><h5 class="text-[10px] font-black text-white uppercase mb-2 italic">2. QR Code Inside</h5><p class="text-[9px] text-gray-500 italic">Doutrinação técnica durante a pausa química.</p></div>
+                    <div class="p-6 glass-panel border-white/5 hover:border-gold transition-all"><h5 class="text-[10px] font-black text-white uppercase mb-2 italic">3. Mapa do Ativo</h5><p class="text-[9px] text-gray-500 italic">Display de mesa com dados técnicos oficiais.</p></div>
+                    <div class="p-6 glass-panel border-pink-500/20"><h5 class="text-[10px] font-black text-pink-500 uppercase mb-2 italic">4. Checkout Gap</h5><p class="text-[9px] text-gray-500 italic">Venda do Pack para manutenção sistémica.</p></div>
+                    <div class="p-6 glass-panel border-white/5 hover:border-emerald-400 transition-all"><h5 class="text-[10px] font-black text-white uppercase mb-2 italic">5. Ranking Hubs</h5><p class="text-[9px] text-gray-500 italic">Compromisso de meta entre todos os sócios.</p></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- MODULO: equity.dg -->
+        <main id="page-equity" class="page-content">
+            <div class="container mx-auto px-10 max-w-6xl py-20 text-center">
+                <div class="module-bg" style="background-image: var(--img-equity); opacity: 0.15;"></div>
+                <h2 class="text-5xl font-extralight uppercase tracking-tighter italic text-white mb-20 z-10">The <span class="text-pink-500 font-bold">Society Round.</span></h2>
+                <div class="glass-panel p-16 max-w-2xl mx-auto mb-12 relative z-10 shadow-2xl">
+                    <span class="text-[10px] font-black text-pink-500 uppercase tracking-widest block mb-4 italic">Aporte por Sócia</span>
+                    <h4 class="text-7xl font-black text-white italic tracking-tighter">R$ 2.000,00</h4>
+                    <p class="text-gray-500 mt-6 uppercase text-[10px] font-black italic">Garante 8.2% de Participação Vitalícia</p>
+                </div>
+                <div class="max-w-2xl mx-auto p-10 glass-panel border-cyan-500/20 text-left relative z-10">
+                    <span class="section-label text-cyan-400 italic">Work Equity: Thiago Dias (51%)</span>
+                    <p class="text-[11px] text-gray-400 italic leading-relaxed italic">Thiago Dias assume 100% da gestão de Tráfego, Design e TI. Economia de **R$ 35k/semestre** em custos operacionais.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- FOOTER FIXO -->
+    <footer class="fixed bottom-0 w-full py-10 bg-black/95 backdrop-blur-md text-center border-t border-white/5 z-[90]">
+        <div class="flex flex-wrap justify-center gap-10 text-[8px] font-extrabold text-gray-600 uppercase tracking-[0.4em] italic text-white">
+            <span class="text-pink-500 font-black">Thiago Dias (Roman Hair)</span>
+            <span>Vera Dias (Essência Rara)</span>
+            <span>Simone & Andreia (Mony Liss)</span>
+            <span>Jessica Grabski</span>
+            <span>Samara (Studio SD)</span>
+        </div>
+    </footer>
+
+    <script>
+        function switchPage(pageId) {
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`[data-page="${pageId}"]`);
+            if(activeLink) activeLink.classList.add('active');
+            document.querySelectorAll('.page-content').forEach(page => page.classList.remove('active'));
+            const activePage = document.getElementById(`page-${pageId}`);
+            if(activePage) activePage.classList.add('active');
+            if(activePage) activePage.scrollTop = 0;
+        }
+        window.onload = () => { switchPage('visao'); };
+    </script>
+</body>
+</html>
