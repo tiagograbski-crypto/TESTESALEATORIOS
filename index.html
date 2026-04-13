@@ -505,70 +505,181 @@
     <section id="ativos" class="py-24 px-6 md:px-10 max-w-7xl mx-auto reveal bg-zinc-900/40 rounded-3xl mb-24 border border-white/5">
         <div class="text-center mb-16">
             <h3 class="text-4xl md:text-5xl font-display italic mb-4">Arquitetura de <span class="gold-gradient">Ativos.</span></h3>
-            <p class="text-gray-400 text-sm max-w-2xl mx-auto">Separação cirúrgica entre a máquina de giro rápido (Alimentação) e a máquina de equity (Hospitalidade).</p>
+            <p class="text-gray-400 text-sm max-w-2xl mx-auto">Diversificação tática: Opções para giro de caixa imediato (Vaca Leiteira), acúmulo de valor (Equity) e locação.</p>
         </div>
 
         <!-- TABS Navigation -->
-        <div class="flex justify-center gap-6 mb-12 border-b border-white/10 pb-4 max-w-lg mx-auto">
-            <button class="tab-btn active text-accent-gold font-bold uppercase tracking-widest text-[10px] pb-4 border-b-2 border-accent-gold px-4 hover:text-accent-gold transition" data-target="tab-gastropark">
-                Unidade Gastronômica
+        <div class="flex justify-start md:justify-center gap-4 md:gap-8 mb-12 border-b border-white/10 pb-4 max-w-3xl mx-auto overflow-x-auto whitespace-nowrap scrollbar-hide">
+            <button class="tab-btn active text-accent-gold font-bold uppercase tracking-widest text-[10px] pb-4 border-b-2 border-accent-gold px-2 hover:text-accent-gold transition" data-target="tab-gastropark">
+                1. Vaca Leiteira (Alimentação)
             </button>
-            <button class="tab-btn text-gray-500 font-bold uppercase tracking-widest text-[10px] pb-4 border-b-2 border-transparent px-4 hover:text-white transition" data-target="tab-cabanas">
-                Hospitalidade (Cabanas)
+            <button class="tab-btn text-gray-500 font-bold uppercase tracking-widest text-[10px] pb-4 border-b-2 border-transparent px-2 hover:text-white transition" data-target="tab-cabanas">
+                2. Equity (Cabanas)
+            </button>
+            <button class="tab-btn text-gray-500 font-bold uppercase tracking-widest text-[10px] pb-4 border-b-2 border-transparent px-2 hover:text-white transition" data-target="tab-comercial">
+                3. Renda Passiva (Lojas)
             </button>
         </div>
 
-        <!-- TAB CONTENT: Gastropark -->
+        <!-- TAB CONTENT 1: Gastropark (Vaca Leiteira) -->
         <div id="tab-gastropark" class="tab-content active">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="bg-black border border-white/10 rounded-xl p-10 shadow-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-accent-gold/10 blur-3xl rounded-full"></div>
-                    <i data-lucide="box" class="w-12 h-12 text-accent-gold mb-6"></i>
-                    <h4 class="text-3xl font-display italic mb-4 text-white">Containers Industriais</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Eficiência bruta. Aço marítimo adaptado para normas da ANVISA. Foco inicial na Cozinha Central (Marmitas e Frango Assado) para giro rápido de caixa, evoluindo de forma modular para uma Vila Gastronômica completa com aluguel de espaços para parceiros.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-3 text-xs text-gray-300"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Baixo custo de montagem (Módulos Usados)</li>
-                        <li class="flex items-center gap-3 text-xs text-gray-300"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Expansão simplificada (Escalável para Vila Gastronômica)</li>
-                        <li class="flex items-center gap-3 text-xs text-gray-300"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Renda diária imediata (Alimentação de base)</li>
-                    </ul>
-                </div>
-                <div class="pl-0 md:pl-10 border-l border-white/5 space-y-8">
-                    <div>
-                        <span class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Investimento Casco Base</span>
-                        <p class="text-2xl font-display text-white mt-1">~ R$ 18.000 <span class="text-xs text-gray-500 font-sans">/unidade 20'</span></p>
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i data-lucide="utensils-crossed" class="w-8 h-8 text-accent-gold"></i>
+                        <h4 class="text-3xl font-display italic text-white">Ecossistema Gastronômico</h4>
                     </div>
-                    <div>
-                        <span class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Tempo de Implementação</span>
-                        <div class="w-full bg-white/5 h-2 rounded-full mt-2"><div class="bg-accent-gold h-2 rounded-full w-[30%]"></div></div>
-                        <p class="text-xs text-gray-400 mt-2">Rápido (30 - 45 dias)</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8">O plano não é construir tudo de uma vez. O objetivo é a **Tração de Caixa**. Começamos com a operação mais barata e usamos o lucro das marmitas e do frango para financiar o restante da estrutura.</p>
+                    
+                    <!-- Fases da Vaca Leiteira -->
+                    <div class="space-y-4">
+                        <div class="p-5 border border-accent-gold/30 bg-accent-gold/5 rounded-xl">
+                            <span class="text-accent-gold font-black uppercase tracking-widest text-[9px] mb-1 block">Fase 1: Início Imediato</span>
+                            <h5 class="text-white font-bold text-sm mb-2">Dark Kitchen (Marmitas & Frango)</h5>
+                            <p class="text-gray-400 text-xs">Container fechado, focado 100% em delivery (iFood/WhatsApp) e fornecimento para trabalhadores locais. Baixíssimo custo de fachada e mesas.</p>
+                        </div>
+                        <div class="p-5 border border-white/10 bg-white/5 rounded-xl">
+                            <span class="text-gray-500 font-bold uppercase tracking-widest text-[9px] mb-1 block">Fase 2: Expansão com Lucro</span>
+                            <h5 class="text-white font-bold text-sm mb-2">Takeaway Express (Retirada)</h5>
+                            <p class="text-gray-400 text-xs">Abertura lateral do container com balcão de vidro. Venda direta para pedestres, lanches rápidos e bebidas. Início da marca própria.</p>
+                        </div>
+                        <div class="p-5 border border-white/10 bg-white/5 rounded-xl">
+                            <span class="text-gray-500 font-bold uppercase tracking-widest text-[9px] mb-1 block">Fase 3: Maturidade do Terreno</span>
+                            <h5 class="text-white font-bold text-sm mb-2">Vila Gastronômica (Gastropark)</h5>
+                            <p class="text-gray-400 text-xs">Adição de novos containers, deck de madeira, banheiros e iluminação quente. Aluguel de espaço para hamburguerias e bar premium noturno.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Image Placeholder Visual -->
+                    <div class="w-full h-64 bg-zinc-800 rounded-xl flex items-center justify-center border border-white/10 overflow-hidden relative group shadow-2xl">
+                        <div class="absolute inset-0 bg-black/60 z-10 group-hover:bg-black/40 transition-colors duration-500"></div>
+                        <img src="https://images.unsplash.com/photo-1565439390118-87b212f45ea2?auto=format&fit=crop&w=800&q=80" alt="Container Food Truck" class="absolute w-full h-full object-cover grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
+                        <div class="z-20 text-center px-4">
+                            <span class="text-accent-gold font-black uppercase tracking-widest text-xs block mb-2"></span>
+                            <p class="text-white/50 text-[10px] uppercase border border-white/10 inline-block px-2 py-1 rounded bg-black/50">Referência Visual Acoplada</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6 p-6 border border-white/5 rounded-xl bg-black">
+                        <div>
+                            <span class="text-[9px] text-gray-500 uppercase tracking-widest font-bold">Investimento Casco Base</span>
+                            <p class="text-xl font-display text-white mt-1">~ R$ 18.000</p>
+                        </div>
+                        <div>
+                            <span class="text-[9px] text-gray-500 uppercase tracking-widest font-bold">Implementação (Fase 1)</span>
+                            <div class="w-full bg-white/5 h-1.5 rounded-full mt-2"><div class="bg-accent-gold h-1.5 rounded-full w-[30%]"></div></div>
+                            <p class="text-[10px] text-gray-400 mt-1">30 - 45 dias</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- TAB CONTENT: Cabanas -->
+        <!-- TAB CONTENT 2: Cabanas (Equity) -->
         <div id="tab-cabanas" class="tab-content">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="bg-black border border-white/10 rounded-xl p-10 shadow-2xl relative overflow-hidden" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/wood-pattern-light.png');">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-accent-gold/10 blur-3xl rounded-full"></div>
-                    <i data-lucide="home" class="w-12 h-12 text-accent-gold mb-6"></i>
-                    <h4 class="text-3xl font-display italic mb-4 text-white">Cabanas A-Frame (Vidro)</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Hospitalidade de experiência focada em turismo. Estrutura em madeira tratada e fachada em vidro duplo. Mezanino luxuoso gerando altíssimo valor percebido no Airbnb.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-3 text-xs text-gray-300"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Ticket diário elevado</li>
-                        <li class="flex items-center gap-3 text-xs text-gray-300"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Baixo custo de manutenção passiva</li>
-                        <li class="flex items-center gap-3 text-xs text-gray-300"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Valoriza a estética e valuation do terreno</li>
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i data-lucide="home" class="w-8 h-8 text-accent-gold"></i>
+                        <h4 class="text-3xl font-display italic text-white">Cabanas A-Frame (Vidro)</h4>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Enquanto os containers trazem o dinheiro do dia a dia, as cabanas constroem o **Equity (Patrimônio de Alto Valor)**. O foco aqui não é vender comida, é vender a experiência do destino.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 bg-white/5 p-4 rounded-lg border border-white/5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mt-0.5"></i>
+                            <div>
+                                <span class="text-white text-xs font-bold uppercase tracking-widest block mb-1">Ticket Diário Elevado</span>
+                                <span class="text-gray-400 text-[10px]">O design em madeira e vidro atrai turistas dispostos a pagar 3x mais que numa pousada comum (Airbnb).</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white/5 p-4 rounded-lg border border-white/5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mt-0.5"></i>
+                            <div>
+                                <span class="text-white text-xs font-bold uppercase tracking-widest block mb-1">Velocidade de Obra</span>
+                                <span class="text-gray-400 text-[10px]">Estruturas pré-fabricadas. Não dependemos de pedreiros locais. A cabana chega desmontada e sobe em semanas.</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <div class="pl-0 md:pl-10 border-l border-white/5 space-y-8">
-                    <div>
-                        <span class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Investimento Casco Base</span>
-                        <p class="text-2xl font-display text-white mt-1">~ R$ 45.000 <span class="text-xs text-gray-500 font-sans">/módulo 30m²</span></p>
+                
+                <div class="space-y-8">
+                    <!-- Image Placeholder Visual -->
+                    <div class="w-full h-64 bg-zinc-800 rounded-xl flex items-center justify-center border border-white/10 overflow-hidden relative group shadow-2xl">
+                        <div class="absolute inset-0 bg-black/60 z-10 group-hover:bg-black/40 transition-colors duration-500"></div>
+                        <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80" alt="Cabana A-Frame" class="absolute w-full h-full object-cover grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
+                        <div class="z-20 text-center px-4">
+                            <span class="text-accent-gold font-black uppercase tracking-widest text-xs block mb-2"></span>
+                            <p class="text-white/50 text-[10px] uppercase border border-white/10 inline-block px-2 py-1 rounded bg-black/50">Referência Visual Acoplada</p>
+                        </div>
                     </div>
-                    <div>
-                        <span class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Tempo de Implementação</span>
-                        <div class="w-full bg-white/5 h-2 rounded-full mt-2"><div class="bg-accent-gold h-2 rounded-full w-[60%]"></div></div>
-                        <p class="text-xs text-gray-400 mt-2">Moderado (60 - 90 dias)</p>
+
+                    <div class="grid grid-cols-2 gap-6 p-6 border border-white/5 rounded-xl bg-black">
+                        <div>
+                            <span class="text-[9px] text-gray-500 uppercase tracking-widest font-bold">Investimento Casco Base</span>
+                            <p class="text-xl font-display text-white mt-1">~ R$ 45.000</p>
+                        </div>
+                        <div>
+                            <span class="text-[9px] text-gray-500 uppercase tracking-widest font-bold">Implementação Total</span>
+                            <div class="w-full bg-white/5 h-1.5 rounded-full mt-2"><div class="bg-accent-gold h-1.5 rounded-full w-[60%]"></div></div>
+                            <p class="text-[10px] text-gray-400 mt-1">60 - 90 dias</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB CONTENT 3: Renda Passiva (Locação Comercial) -->
+        <div id="tab-comercial" class="tab-content">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i data-lucide="store" class="w-8 h-8 text-accent-gold"></i>
+                        <h4 class="text-3xl font-display italic text-white">Módulos Lojistas</h4>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Uma das formas mais inteligentes de rentabilizar a terra sem precisar trabalhar na operação. A holding constrói módulos comerciais atraentes (vidro e aço) e aluga o "ponto" para empresas locais.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 border border-white/10 bg-white/5 rounded-lg text-center">
+                            <i data-lucide="scissors" class="w-6 h-6 text-gray-400 mx-auto mb-2"></i>
+                            <span class="text-white text-xs font-bold uppercase block">Barbearias</span>
+                        </div>
+                        <div class="p-4 border border-white/10 bg-white/5 rounded-lg text-center">
+                            <i data-lucide="coffee" class="w-6 h-6 text-gray-400 mx-auto mb-2"></i>
+                            <span class="text-white text-xs font-bold uppercase block">Cafeterias</span>
+                        </div>
+                        <div class="p-4 border border-white/10 bg-white/5 rounded-lg text-center">
+                            <i data-lucide="shopping-bag" class="w-6 h-6 text-gray-400 mx-auto mb-2"></i>
+                            <span class="text-white text-xs font-bold uppercase block">Conveniência</span>
+                        </div>
+                        <div class="p-4 border border-white/10 bg-white/5 rounded-lg text-center">
+                            <i data-lucide="waves" class="w-6 h-6 text-gray-400 mx-auto mb-2"></i>
+                            <span class="text-white text-xs font-bold uppercase block">Surf Shops</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- Image Placeholder Visual -->
+                    <div class="w-full h-64 bg-zinc-800 rounded-xl flex items-center justify-center border border-white/10 overflow-hidden relative group shadow-2xl">
+                        <div class="absolute inset-0 bg-black/60 z-10 group-hover:bg-black/40 transition-colors duration-500"></div>
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Loja Container" class="absolute w-full h-full object-cover grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
+                        <div class="z-20 text-center px-4">
+                            <span class="text-accent-gold font-black uppercase tracking-widest text-xs block mb-2"></span>
+                            <p class="text-white/50 text-[10px] uppercase border border-white/10 inline-block px-2 py-1 rounded bg-black/50">Referência Visual Acoplada</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6 p-6 border border-white/5 rounded-xl bg-black">
+                        <div>
+                            <span class="text-[9px] text-gray-500 uppercase tracking-widest font-bold">Investimento (Com Vidros)</span>
+                            <p class="text-xl font-display text-white mt-1">~ R$ 25.000</p>
+                        </div>
+                        <div>
+                            <span class="text-[9px] text-gray-500 uppercase tracking-widest font-bold">Perfil de Renda</span>
+                            <p class="text-[12px] font-bold text-green-400 mt-2 uppercase tracking-widest">100% Passiva</p>
+                            <p class="text-[9px] text-gray-500 mt-1">Contratos de 12 a 36 meses</p>
+                        </div>
                     </div>
                 </div>
             </div>
