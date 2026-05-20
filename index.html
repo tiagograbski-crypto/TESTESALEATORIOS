@@ -2,17 +2,43 @@
 <html lang="pt-BR" class="dark">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>GL PRO | Bio-Engenharia Capilar</title>
+    
+    <!-- Link do CSS Unificado -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Frameworks -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+
+    <!-- Google Tag Manager (Script unificado) -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KSC788J2');</script>
 </head>
-<body class="bg-black text-white">
-    <nav id="top-nav" class="fixed top-0 w-full z-[110] p-6 flex justify-center gap-8 bg-black/50 backdrop-blur-md">
-        <a href="#/home">Tecnologia</a>
-        <a href="#/trends">Tendências</a>
-        <a href="#/homecare">Boutique VIP</a>
-        <a href="#/studios">Estúdios</a>
+<body class="bg-[#040303] text-white overflow-x-hidden font-sans">
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSC788J2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Navegação Global (SPA Router) -->
+    <nav id="top-nav" class="fixed top-0 w-full z-[110] flex justify-center gap-8 py-8 bg-black/40 backdrop-blur-lg border-b border-white/5">
+        <a href="#/home" class="text-[9px] uppercase tracking-[0.3em] font-bold hover:text-[#C5A059] transition-colors">Tecnologia</a>
+        <a href="#/trends" class="text-[9px] uppercase tracking-[0.3em] font-bold hover:text-[#C5A059] transition-colors">Tendências</a>
+        <a href="#/homecare" class="text-[9px] uppercase tracking-[0.3em] font-bold hover:text-[#C5A059] transition-colors">Boutique VIP</a>
+        <a href="#/studios" class="text-[9px] uppercase tracking-[0.3em] font-bold hover:text-[#C5A059] transition-colors">Estúdios</a>
     </nav>
-    <main id="app-root"></main>
+
+    <!-- Container Dinâmico: Aqui entra todo o conteúdo das abas -->
+    <main id="app-root" class="pt-24 min-h-screen">
+        <!-- O Roteador injetará as views aqui -->
+    </main>
+
+    <!-- Rodapé Estratégico (Oculto/B2B) -->
+    <footer class="py-12 border-t border-white/5 text-center">
+        <a href="#/partnership" class="text-[8px] uppercase tracking-[0.3em] opacity-40 hover:opacity-100 transition-opacity">Área de Parcerias</a>
+    </footer>
+
+    <!-- Lógica de Roteamento (Motor do site) -->
     <script src="assets/js/app.js"></script>
 </body>
 </html>
