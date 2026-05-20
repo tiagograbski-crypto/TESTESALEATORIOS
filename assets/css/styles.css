@@ -2,38 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 1. Variáveis de Marca (DNA GL PRO) */
 :root {
     --bg-primary: #040303;
     --high-contrast: #ffffff;
-    --accent: #C5A059;
-    --glass: rgba(255, 255, 255, 0.1);
+    --accent: #C5A059; /* Ouro GL PRO */
     --surface: rgba(255, 255, 255, 0.03);
+    --glass: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+    body {
+        @apply bg-[var(--bg-primary)] text-[var(--high-contrast)] antialiased;
+        font-family: 'Inter', sans-serif;
+    }
 }
 
 @layer components {
-    /* Estrutura Base */
-    body {
-        @apply bg-[var(--bg-primary)] text-[var(--high-contrast)] font-sans antialiased;
-    }
-
-    /* Componentes de Luxo (Glassmorphism) */
+    /* Componentes de Luxo Silencioso */
     .glass-panel {
         @apply bg-[var(--surface)] backdrop-blur-md border border-[var(--glass)] rounded-2xl;
     }
 
     .platinum-card {
-        @apply bg-gradient-to-br from-[#1a1a1a] to-[#040303] border border-[#C5A059]/20 shadow-[0_0_30px_rgba(197,160,89,0.1)];
+        @apply bg-gradient-to-br from-[#1a1a1a] to-[#040303] border border-[var(--accent)]/20 shadow-[0_0_30px_rgba(197,160,89,0.05)] rounded-xl transition-all duration-300;
+    }
+
+    .platinum-card:hover {
+        @apply border-[#C5A059] shadow-[0_0_40px_rgba(197,160,89,0.15)];
     }
 
     .btn-luxury {
-        @apply bg-white text-black hover:bg-[var(--accent)] hover:text-white transition-all duration-500 rounded-full cursor-pointer;
+        @apply px-12 py-6 rounded-full bg-white text-black font-black uppercase tracking-[0.3em] text-[10px] cursor-pointer transition-all duration-500;
+    }
+    .btn-luxury:hover {
+        @apply bg-[var(--accent)] text-white;
     }
 
-    /* Tipografia de Autor */
-    .font-editorial { font-family: 'Playfair Display', serif; } /* Ajuste para o seu font-family oficial */
-    .font-tech { font-family: 'Inter', sans-serif; }
-
-    /* Animações e Efeitos */
+    /* Animações de Performance */
     .reveal {
         opacity: 0;
         transform: translateY(20px);
@@ -43,18 +49,13 @@
         opacity: 1;
         transform: translateY(0);
     }
-
-    .animate-slide-horizontal {
-        animation: slide 20s linear infinite;
-    }
 }
 
-@keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-/* Ajustes de Responsividade Fluidos */
+/* 2. Responsividade Fluida */
 @media (max-width: 768px) {
-    .font-editorial { font-size: clamp(2rem, 5vw, 3rem) !important; }
+    .hero-text { font-size: clamp(2rem, 8vw, 4rem) !important; }
 }
+
+/* 3. Ajustes de Utilidade */
+.text-gold { color: var(--accent); }
+.border-gold { border-color: var(--accent); }
